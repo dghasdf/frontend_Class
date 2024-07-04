@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+
+/* reset */
+
+#app_container {
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans KR";
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#top_navigation {
+  width: 1920px;
+  height: 60px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.navbar {
+  display: flex;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+}
+
+.topNav {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.topNav li a {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* 슬라이더 영역 전체 위치 */
+
+#slide {
+  width: 100%;
+  height: 550px;
+  position: relative;
+  background: url("https://i.pinimg.com/originals/f0/2b/32/f02b3278f1d074fac9f8b11a27418e3e.jpg")
+    bottom/100% no-repeat;
+}
+
+/* 슬라이더 텍스트 정보 */
+.slide_text {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+/* 슬라이더 중앙 이미지 및 글씨 위치 */
+.slide_intro {
+  padding-top: 50px;
+  padding-bottom: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+.slide_img {
+  border-radius: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/* 슬라이더 텍스트 박스 위치 */
+.slide_inner {
+  color: #fff;
+  width: 300px;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+
+#about {
+  width: 100%;
+  height: 700px;
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #40a1ff;
+  text-align: center;
+  about_img {
+    display: flex;
+    top: 450px;
+  }
+}
+
+.abuot_title {
+  display: flex;
+  font-size: 40px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 80px;
+  border: 1px solid #000;
+}
+
+.about_text {
+  top: 300px;
+  display: inline-block;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  margin: 15px;
+  border: 1px solid #f0f0f0;
+}
+
+.about_intro {
+  width: 350px;
+  height: 350px;
+  display: flex;
+  position: absolute;
+  top: 200px;
+  left: 800px;
+  border: 1px solid red;
+}
+
+.about_inner {
+  color: #fff;
+  width: 300px;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+
+.about_text {
+  display: flex;
+  position: absolute;
+  border: 1px solid #000;
+  font-size: 25px;
+}
+
+#instroudtion {
+  width: 100%;
+  height: 1000px;
+  position: relative;
+  background-color: #40a1ff;
+}
+
+.instroudtion_text {
+  display: flex;
+  margin: 40px;
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  color: #fff;
+  border: 1px solid #000;
+}
+
+.instroudtion_textbox {
+  text-align: center;
+  font-size: 30px;
+  color: #fff;
+  border: 1px solid #000;
+}
+
+.instroudtion_img {
+  display: flex;
+  width: 650px;
+  height: 650px;
+  border: 1px solid #000;
+}
+
+#inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0c0e6;
+  color: #000;
+}
+
+#items {
+  display: flex;
+  gap: 100px;
+  .item {
+    text-align: center;
+    width: 350px;
+    height: 200px;
+    position: relative;
+    .front,
+    .back {
+      position: absolute;
+      top: 0;
+      transition: all 0.5s;
+    }
+    .front {
+      z-index: 1;
+      width: 100%;
+      text-align: center;
+      height: 100%;
+      background-color: #fff;
+      border-radius: 5px 5px 0 0;
+    }
+    .back {
+      background-color: #d6c0f0;
+      border-radius: 8px;
+      height: 100%;
+      color: #000;
+      padding: 20px;
+      a {
+        display: inline-block;
+        background-color: yellowgreen;
+        margin-top: 6px;
+        padding: 5px 15px;
+        border-radius: 20px;
+        color: #fff;
+        transition: background-color 0.3s;
+        &:hover {
+          background-color: #fff;
+        }
+      }
+    }
+    &:hover .front {
+      top: -50%;
+    }
+    &:hover .back {
+      top: 50%;
+    }
+    &:hover img {
+      animation: ani 1s linear infinite;
+    }
+  }
+}
+
+@keyframes ani {
+  0% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}

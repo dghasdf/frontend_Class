@@ -1,0 +1,126 @@
+css3:
+position: static / relative / absolute / fixed sticky
+
+html5 어려워하는 이유
+공간분할태그
+1) block요소의 태그 :  한 줄 (한행)을 모두 가져가는 속성
+-div, header, h(n), p등등..
+width, height, margin, padding 모두 적용 가능.
+
+2) lnline : 본인의 너비 및 높이값만큼만 공간을 차지하는 속성
+-span, label, input
+width, height 적용불가 / margin, padding은 좌우측 적용 가능, 상하측 적용가능
+
+3)상관없이 적용하고 싶어 상하좌우측 적용하고싶다.
+ = inline-block요소 속성
+
+4)만약, 부모요소 display: flex => 자식요소는 block
+
+block = inlineblock : 블락은 공존이 안됨
+
+중요 : semantic tag: 의미를 가지고있는 태그를쓰자. 
+면접에서 1차로 semantic 태그썻는지.(div태그 남발)
+2차로 반응형인지.
+header: 문서상에 헤더의 역할 =>머릿글 || 인트로 역할
+nav: gnb, lnb와 같은 네비게이션 목록의 역할
+aside : 사이드 측면 영역의 지면 역할
+section : 실제 문서상의 본문 역할
+article : 섹션태그 안에 소단락(세부영역) 나누는 역할
+footer : 문서상의 푸터의 역할(맨 아래부분 - 꼬리말 || 에필로그 역할)
+
+css3
+=> 폭포수라고 불린다.
+=> 모든 속성들이 상속이라는 베이스로 움직임
+3가지의 html 적용법
+1. 인라인스타일 :태그에 직접 상속.
+ex)<h1 style="color: #f00">css3 selector basic</h1>
+
+
+2. 내부 스타일 = 타이틀과 헤더 사이에 style을 넣어줌.
+ex) <title>Document</title>
+    <style>
+      p {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="color: #f00">css3 selector basic</h1>
+
+3. 외부 스타일(실무에서 많이 사용)
+
+css3 선택자
+1)전체선택자
+- wildcard선택자라고도 불림
+-reset css에서 사용햇음
+- *(모두를 뜻함)
+
+2)태그선택자
+특정한 태그를 선택해서 스타일을 적용할때
+
+3)아이디선택자
+html 태그중에서 id="xxx" 속성값을 가지고 있는 태그들에게 스타일적용
+-앞에 해시(#)붙어야함.
+- 중요. id속성값은 반드시 html에서 1번만 사용해야한다.
+
+4)클래스선택자
+- html 태그 중에서 class 속성값을 가지고 있는 태그들에게 스타일을 적용
+-"."
+- class 속성값은 html에서 여러번 횟수제한없이 사용가능!
+-반복적으로 공통된 스타일일을 정의하고 적용할때 사용한다.
+
+5)후손선택자
+- 부모 아래에 들어오는 모든 자식 요소들
+-자손선택자도 모두 포함
+- "띄어쓰기" -
+
+6)자손선택자
+-부모의 직계 자식요소
+-">"
+
+7)속성선택자
+-동일한 html 태그의 동일한 속성을 가지고 있는 경우,
+안에 들어가있는 속성값에 따라서 스타일 상이하게 적용
+
+    input[type="text"] {
+      background-color: #f00;
+    }
+    input[tpye="password"] {
+      background-color: #00f;
+    }
+예시. input tpye의 속성을 레드와 블루로 상이하게적용 함.
+
+8)동위선택자
+- 같은 위치에 속해있는 요소들간 스타일을 적용하고싶을때
+반드시 형제 요소에
+특정 요소의 바로 뒤에 존재하는 형제"+"
+    #same-position > h1 + h2 {
+      color: #0f0;
+    }
+
+
+특정 요소 뒤에 있는 모든 형제: 
+"~"
+    #same-position > h1 ~ h2 {
+      background-color: orange;
+    }
+
+9)구조선택자
+-일반구조선택자
+-속성구조선태자
+
+10)반응선택자
+사용자가 어떤 액션(이벤트)실행 =>반응 일으킴(마우스 오버 / 클릭 / 떠나게)
+-hover : 마우스오버
+-active:마우스 클릭
+
+11)상태선택자
+-사용자의 이벤트 액션을 통해서 특정 태그 및 요소들의 상태가 변화되었다는 것을 감지하고 이를 통해서
+스타일을 적용
+-form : 버튼 / check / radio
+
+12)링크선택자
+
+13)문자선택자
+
+14)부정선택자
