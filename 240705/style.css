@@ -53,7 +53,7 @@ a {
 
 #slide {
   width: 100%;
-  height: 550px;
+  height: 600px;
   position: relative;
   background: url("https://i.pinimg.com/originals/f0/2b/32/f02b3278f1d074fac9f8b11a27418e3e.jpg")
     bottom/100% no-repeat;
@@ -91,71 +91,37 @@ a {
   font-size: 30px;
 }
 
-#about {
+#title {
   width: 100%;
-  height: 700px;
+  height: 650px;
   position: relative;
-  background-color: #fff;
-  border: 1px solid #40a1ff;
-  text-align: center;
-  about_img {
-    display: flex;
-    top: 450px;
-  }
-}
-
-.abuot_title {
-  display: flex;
-  font-size: 40px;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  width: 100%;
-  height: 80px;
-  border: 1px solid #000;
-}
-
-.about_text {
-  top: 300px;
-  display: inline-block;
-  position: absolute;
-  justify-content: center;
-  align-items: center;
-  font-size: 30px;
-  margin: 15px;
-  border: 1px solid #f0f0f0;
-}
-
-.about_intro {
-  width: 350px;
-  height: 350px;
-  display: flex;
-  position: absolute;
-  top: 200px;
-  left: 800px;
   border: 1px solid red;
 }
 
-.about_inner {
-  color: #fff;
-  width: 300px;
-  justify-content: center;
-  align-items: center;
-  font-size: 30px;
+.inner {
+  width: 100%;
+  height: 60px;
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  width: 100%;
+  height: 300px;
+  justify-content: space-around;
+  border: 1px solid red;
 }
 
 .about_text {
-  display: flex;
-  position: absolute;
-  border: 1px solid #000;
-  font-size: 25px;
+  font-size: 40px;
+  line-height: 300px;
+  text-align: center;
 }
 
 #instroudtion {
   width: 100%;
   height: 1000px;
   position: relative;
-  background-color: #40a1ff;
 }
 
 .instroudtion_text {
