@@ -1,6 +1,6 @@
 /* 글씨 타이핑 효과 */
 const $txt = document.querySelector(".about_text");
-const content = "안녕하세요 :)";
+const content = "방갑습니다!\n노력의 대명사\n김준영입니다 :)";
 let contentIndex = 0;
 let typing = function () {
   $txt.innerHTML += content[contentIndex];

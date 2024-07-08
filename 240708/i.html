@@ -1,0 +1,36 @@
+const tokenButton = document.querySelector("#token_button"); const tokenNumber =
+document.querySelector("#token"); const tokenTimer =
+document.querySelector("#token_timer"); const tokenConfirmBtn =
+document.querySelector("#token_timer_confirmBtn"); let interval; const
+getTokenTimer = () => { let timer = 180; interval = setInterval(() => { if
+(timer >= 0) { const mins = Math.floor(timer / 60); const secs = timer % 60;
+tokenTimer.innerText = mins + ":" + String(secs).padStart(2,"0"); timer -= 1; }
+else { tokenNumber.innerText = "000000"; tokenButton.style = "";
+tokenButton.setAttribute("disabled", true); tokenTimer.innerText = "3:00";
+tokenConfirmBtn.setAttribute("disabled", true) tokenConfirmBtn.style = "";
+clearInterval(interval); } }, 10); }; const changePhone1 = () => { //
+value속성을 통해 phoneValue1의 값을 받아옴 const phone1 =
+document.querySelector("#phone1").value; // 리얼타임으로 받아오는 것이 아니기에
+이벤트 부여 if (phone1.length === 3) { // focus 함수를 통해 커서가 넘어가게됨
+document.querySelector("#phone2").focus(); } }; const changePhone2 = () => { //
+value속성을 통해 phoneValue1의 값을 받아옴 const phone2 =
+document.querySelector("#phone2").value; // 리얼타임으로 받아오는 것이 아니기에
+이벤트 부여 if (phone2.length === 4) { // focus 함수를 통해 커서가 넘어가게됨
+document.querySelector("#phone3").focus(); } else if (phone2.length === 0) {
+document.querySelector("#phone1").focus(); } }; const changePhone3 = () => { //
+value속성을 통해 phoneValue1의 값을 받아옴 const phone1 =
+document.querySelector("#phone1").value; const phone2 =
+document.querySelector("#phone2").value; const phone3 =
+document.querySelector("#phone3").value; // 리얼타임으로 받아오는 것이 아니기에
+이벤트 부여 if (phone3.length === 0) {
+document.querySelector("#phone2").focus(); } if (phone1.length === 3 &&
+phone2.length === 4 && phone3.length === 4) {
+tokenButton.removeAttribute("disabled"); tokenButton.style = "background-color :
+#fff; color : #0068FF; cursor : pointer;"; } else {
+tokenButton.setAttribute("disabled", true); tokenButton.style = "none"; } };
+tokenButton.addEventListener("click", (e) => { e.preventDefault(); // floor로
+소수점을 없앰. const verNum = String(Math.floor(Math.random() *
+1000000)).padStart(6, "0"); tokenNumber.innerHTML = verNum;
+tokenConfirmBtn.removeAttribute("disabled"); tokenConfirmBtn.style =
+"background-color : #0068FF; color : #fff; cursor : pointer"; getTokenTimer();
+});

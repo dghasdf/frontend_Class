@@ -1,0 +1,102 @@
+자바스크립트 기본 개념 단위 : 변수
+변수 => 값을 담는 그릇
+
+어디에서 생성되고 선언되나?
+=지역변수(local) 해당 조건문 안에서만 사용가능 벗어나면 사용 x / 전역변수(global)
+
+자바 =  Math.random();
+0~1미만의 실수값(소수점)을 난수 형태로 랜덤 생성
+
+밀리초 시간 개념 => 1초 1000인식
+1970년 1월1일부터 ~현재
+
+ Math.floor = 소숫점 없애기
+
+figma
+>오토레이아웃
+>레이아웃그리드
+>와이어프레임
+>컴포넌트 / 인스턴스
+>프로토타입
+
+html5 배운것 정리
+>태그
+-공간분할태그(인라인과 블락)
+>semantic
+
+css3_v1
+>선택자 13개
+>속성 13개
+
+레이아웃
+>desktop lofi wireframe 제작.
+<desktop hifi wireframe
+
+css3_v2
+
+>transition (전환 / 변형)
+css에서 반응선택자를 사용할 때 주로사용함.
+반응 전 / 반응 후 => 상태변화(즉각 / 시차)
+=>반응이 발생되기 전단계에서 속성값을 적용
+
+1.transtition-duration: 변형이 작동할 수 있는 기간 설정
+2.transtition-delay : 반응선택자를 통해서 이벤트 실행 후 얼마 후에 변형 스타일을 적용할 것인지 설정.
+3.transtition-property : 변형 스타일을 적용할 요소를 무엇으로 설정
+4.transtition-timing-function: 가속 혹은 감속에 대한 영향을 줄 수 있는 함수 설정
+linear:선형 그라디언트 - 가속, 감속x
+ease : 도입부분(in)에서는 조금 덜 완만하게 / 완료부분(out)에서는 조금 더 완만하게 / 중간영역에서 급격하게
+ease-in: 도입부분(in)에서는 완만하게 시작 / 완료부분(out)에서는 급격하게 종료
+ease-out : 도입부분(in)에서는 급격하게 시작 / 완료부분(out)에서는 완만하게 종료
+ease-in-out : 도입부분(in)과 완료부분(out)완만하게 / 중간영역 급하게 
+
+참고사이트: https://cubic-bezier.com/#.25,.1,.25,1
+
+font축약: 스타일 사이즈/라인하이트 패밀리 / 백그라운드-그라디언트,이미지,사이즈,포지션/사이즈,리피트
+tanstition: 프로퍼티 / 듀레이션 / 타이밍펑션 / 딜레이
+
+>animation
+1)animation-duration 얼마의 기간동안 애니메이션을 실행시킬 것인가.
+animation-delay: 이벤트 발생 후 얼마 후 시점부터 애니메이션 실행
+animation-timing-function애니메이션 실행 시 가,감속 어떻게 할 할 것인가.
+animation-direction : 애니메이션 실행 방향 설정(좌우)
+animation-name 해당 애니메이션 만의 고우한 이름 설정
+animation-interation-ccount 애니메이션을 얼만큼 반복하게 할 것인가.
+animation-paly-state : 애니메이션에 일시정지의 기능을 삽입
+
+
+>transform(변환) =>transformer(자동차 =>로봇)
+rotate(angle deg) : 회전각도
+scale() : 크기
+skew(x,y) : 특정 중심축을 기준으로 회전 기울기 x,y축 좌표 동시에 가능
+skewx() : 특정 중심축을 기준으로 회전 기울기
+translate():특정 크기만큼 이동
+
+transition: 어떤 이미지 혹은 아이템 요소가 변환하는데 있어서 변형에 대한 속성값을 제어
+
+transoform : 어떤 이미지 혹은 아이템 요소의 형태 혹은 위치(좌표)등 자체를 변환시키기 위한 속성 / 좌표값 /각도회전 / 중심축(x,y,z)으로부터 회전 / 크기 
+
+=> 1개의 이미지 혹은 도형 요소에 복수의 transform 효과적용
+>적용하는 순서에 따라서 결과값이 완전히 달라질 수 있음
+
+>3d 공간 개념을 배움.
+=>z축에 대한 공간감
+모든 함수에 z축만 들어가면 3차원이다.
+loading-spinner
+
+webkit-perspective: 2000;
+perspective: 2000;
+=>원근감 표현
+
+자식요소에서의 z축으로부터의 공간감을 적용시켜주기 위해서 부모요소에서 적용
+transform-style: preserve-3d;
+
+
+>animation
+
+css3_v3
+flexble / responsive(반응형)
+flex / grid
+>media-query => device / break-point
+
+scss
+>min-in / include

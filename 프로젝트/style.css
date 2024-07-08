@@ -22,6 +22,9 @@ a {
   color: inherit;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
 #top_navigation {
   width: 1920px;
   height: 60px;
@@ -45,7 +48,7 @@ a {
 }
 
 .topNav li a {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
 }
 
@@ -53,10 +56,10 @@ a {
 
 #slide {
   width: 100%;
-  height: 550px;
+  height: 700px;
   position: relative;
   background: url("https://i.pinimg.com/originals/f0/2b/32/f02b3278f1d074fac9f8b11a27418e3e.jpg")
-    bottom/100% no-repeat;
+    center/cover no-repeat;
 }
 
 /* 슬라이더 텍스트 정보 */
@@ -94,92 +97,47 @@ a {
 #about {
   width: 100%;
   height: 700px;
-  position: relative;
   background-color: #fff;
-  border: 1px solid #40a1ff;
   text-align: center;
-  about_img {
-    display: flex;
-    top: 450px;
-  }
+  position: relative;
+}
+
+#about_inner {
+  display: flex;
+  margin-top: 80px;
+  justify-content: center;
+  align-items: center;
 }
 
 .abuot_title {
-  display: flex;
   font-size: 40px;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
   width: 100%;
   height: 80px;
-  border: 1px solid #000;
-}
-
-.about_text {
-  top: 300px;
-  display: inline-block;
-  position: absolute;
-  justify-content: center;
-  align-items: center;
-  font-size: 30px;
-  margin: 15px;
-  border: 1px solid #f0f0f0;
 }
 
 .about_intro {
+  justify-content: center;
   width: 350px;
   height: 350px;
-  display: flex;
-  position: absolute;
-  top: 200px;
-  left: 800px;
-  border: 1px solid red;
-}
-
-.about_inner {
-  color: #fff;
-  width: 300px;
-  justify-content: center;
-  align-items: center;
-  font-size: 30px;
+  img {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .about_text {
-  display: flex;
-  position: absolute;
-  border: 1px solid #000;
+  margin-top: 20px;
+  text-align: center;
   font-size: 25px;
-}
-
-#instroudtion {
-  width: 100%;
-  height: 1000px;
-  position: relative;
-  background-color: #40a1ff;
-}
-
-.instroudtion_text {
-  display: flex;
-  margin: 40px;
-  text-align: center;
-  font-size: 50px;
   font-weight: bold;
-  color: #fff;
-  border: 1px solid #000;
 }
 
-.instroudtion_textbox {
+.instroudetion {
+  width: 100%;
+  height: 80px;
   text-align: center;
-  font-size: 30px;
-  color: #fff;
-  border: 1px solid #000;
-}
-
-.instroudtion_img {
-  display: flex;
-  width: 650px;
-  height: 650px;
-  border: 1px solid #000;
+  font-size: 25px;
+  background: #f0c0e6;
 }
 
 #inner {
@@ -256,6 +214,24 @@ a {
   }
 }
 
+#Contact {
+  width: 100%;
+  height: 80px;
+  text-align: center;
+  font-size: 25px;
+}
+
 #footer {
   width: 100%;
+  height: 350px;
+}
+
+.inner {
+  width: 100px;
+  display: flex;
+}
+.footer_img {
+  display: flex;
+  margin-top: 120px;
+  justify-content: space-around;
 }
