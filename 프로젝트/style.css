@@ -2,6 +2,8 @@
 
 /* reset */
 
+/* desk top */
+
 #app_container {
 }
 * {
@@ -43,13 +45,48 @@ body::-webkit-scrollbar {
 
 .topNav {
   display: flex;
-  flex-direction: row;
-  gap: 40px;
-}
-
-.topNav li a {
+  justify-content: center;
+  gap: 60px;
+  padding-bottom: 4px;
   font-size: 20px;
   font-weight: bold;
+}
+.topNav > li {
+  position: relative;
+}
+
+.topNav > li > a {
+  color: #000;
+}
+
+.topNav .active {
+  color: #000;
+  font-weight: bold;
+}
+
+.topNav > li .lnb {
+  width: 160px;
+  height: 200px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  text-align: center;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 15px 0 8px;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.topNav > li .lnb a {
+  display: inline-block;
+  color: #000;
+  margin: 20px 0;
+  &:hover {
+    color: #e70017;
+  }
 }
 
 /* 슬라이더 영역 전체 위치 */
@@ -234,4 +271,8 @@ body::-webkit-scrollbar {
   display: flex;
   margin-top: 120px;
   justify-content: space-around;
+}
+
+/* mobile */
+@media screen and (max-width: 1190px) and (min-width: 360px) {
 }
