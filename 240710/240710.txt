@@ -1,0 +1,89 @@
+자바스크립트 연산자
+
+증감연산자
+논리연산자
+비교연산자
+
+>
+<
+>=
+<=
+
+js=> 변수 데이터 값은 타입을 가지고 있음.
+타입=>문자열/숫자/논리형/객체/함수/배열 등
+
+1(숫자) == "1"(문자) => 같다!!
+1==="1" => 다르다
+
+!=>반대
+
+== : 같다.의 의미 (느슨한 비교)
+=== : 같다.의 의미 (엄격한 비교)
+
+css3 =>레벨로 업그레이드!
+-animation / transition / transform
+-flex / grid
+>기존 css로는 float/margin/ padding / table = 레이아웃 정렬
+이러한 불편함을 없애고자 레이아웃 정렬 전용 속성 = flex / grid
+
+1) 부모(컨테이너 박스)
+>display : flex (자식요소에는 쓰는게 아님.)
+> jusify-content = 중심축을 기준 정렬 : 수평정렬
+-center : 아이템 전체 너비의 정가운데
+-flex
+-start: 플렉스가 시작되어지는 지점을 기준으로 정렬
+웹 모든 그래픽요소 : 좌에서 시작해서 우로 이동한다.
+flex-end : 우측정렬.
+strech: 자식요소의 높이값을 별도로 지정하지 않는 경우, 부모요소의 높이를
+자동으로 상속 받는다.
+
+복수 아이템
+space-between
+space-around
+space
+
+>align-items =교차축을 기준으로 정렬 = 수직정렬
+>flex-direction => 중심축 / 교차축을 무엇으로 할 것인가.
+row(왼쪽부터)//row-reverse(중심축은 가로이지만 오른쪽에서 시작)
+=> 겉으로 얼핏보면 flex-end랑 같아보이지만 다른기능이다. 
+
+columm(상단부터) // columm-reverse(하단부터)
+
+
+
+만약 안사용 하면 기본 디폴트는 row / columm
+> flex-wrap=>default =>no-wrap => 자식요소에 너비를 보장하지않음.
+>align-contents=> 자식요소들이 여러개의 행으로 구분이 되어졌을 때
+어느 방향으로 모든 자식요소들의 수직정렬을 결정
+
+flex-wrap & flex-direction 하나로 통합해서 작성?
+>flex-flow
+alig-contents => 자식요소들이 여러개의 행으로 구분이 되어졌을 때 어느 방향으로 모든 자식요소들의 수직정렬을 결정 / 하나의 컨텐츠로 식별 => 수직정렬을 주고할 때
+center
+flex-start
+flex-end
+space-between
+space-around
+space-enely
+content가 다 붙으면 space는 다 줄 수있다.
+
+2) 자식(플렉스 레이아웃 시스템 문법 적용)
+flex-grow : 자식요소들의 대한 너비값의비율
+flex-srink : 자식요소들의 너비가 줄어들 때의 비율을 결정
+flex-basis: 자식요소들에게 고정 너비값을 부여하고 싶을때
+=> flex: 자식요소들을 한번에 쓸 수 잇음.
+>order : 자식요소들의 포지션 위치 순서 결정한다.
+
+justify-content: space-evenly; 여백 포함 모든간격이 동일하게 준다.
+
+3) 중심축 / 교차축
+-중심축 default => 가로 row
+-반대 => 교차축 default => 세로 columm
+
+특정 아이템 위치를 조정
+>transfrom > tranlate(x,y)
+= margin과 padding으로 조정이 안되나?
+= 상황에 따라 맞게끔 사용하자.
+
+포지션에 앱솔루트 남발하지말자.
+
