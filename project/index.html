@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="./script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/d0d7b265e4.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <div>
+    <main id="app_container">
+      <header id="navigation_heading">
+        <nav id="navigation">
+          <ul class="gnbDesktop">
+            <li><a href="#">Info</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li>
+              <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            </li>
+          </ul>
+          <ul class="gnbMobile">
+            <li><a href="#">Info</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li>
+              <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            </li>
+          </ul>
+          <div class="search_bar">
+            <span>
+              <i class="fas fa-xmark"></i>
+            </span>
+            <div class="search_bar_form">
+              <form action="http://localhost:3000" method="get">
+                <h2>검색</h2>
+                <a href="#">
+                  <i class="fas fa-magnifying-glass"></i>
+                </a>
+                <input
+                  type="text"
+                  name="search"
+                  id="search"
+                  placeholder="김준영에 대해 알고 싶은 것을 입력"
+                />
+              </form>
+              <h3 class="search_favorite">나를 간단히 소개한다면?</h3>
+              <div class="search_hashtag">
+                <div>
+                  <span>#강아지</span>
+                  <span>#고양이</span>
+                  <span>#동물최고</span>
+                </div>
+                <div>
+                  <span>#면요리</span>
+                  <span>#한식파</span>
+                  <span>#활동적인</span>
+                </div>
+                <div>
+                  <span>#요리하기</span>
+                  <span>#준영셰프</span>
+                  <span>#과자좋아함</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="trigger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </nav>
+      </header>
+    </main>
+    <!-- slide -->
+    <main class="ani">
+      <img src="./img/길거리.png" alt="배경" />
+      <section id="slide">
+        <!-- <article class="sun">
+          <img class="sunny" src="./img/sun (1).png" alt="sun" />
+        </article> -->
+        <!-- <article class="town">
+          <img class="night" src="#" alt="circle" />
+        </article> -->
+        <article class="people">
+          <img class="man" src="./img/강아지.png" alt="man" />
+        </article>
+        <article class="people_text">
+          <img
+            class="man"
+            src="./img/헬로우.png"
+            width="300"
+            height="150"
+            alt="man"
+          />
+        </article>
+      </section>
+    </main>
+  </div>
+  <!-- info -->
+  <main>
+    <section id="info">
+      <div class="info_title">
+        <h1>Info</h1>
+      </div>
+      <div id="info_inner">
+        <article class="info_intro">
+          <a href="about_img">
+            <img
+              src="./img/내사진.jpg"
+              width="350"
+              height="450"
+              alt="이미지사진"
+            />
+            <div class="img_content">
+              <h2>Kim Jun Yeoung</h2>
+              <p>
+                이름 : 김준영 <br />생년월일 : 1997.03.14 <br />거주지:
+                서울특별시 중랑구 <br />전공 : 컴퓨터정보통신과
+              </p>
+              <div class="sns">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              </div>
+            </div>
+          </a>
+        </article>
+      </div>
+      <div class="info_text"></div>
+    </section>
+  </main>
+  <!-- section -->
+  <main id="about_bar"><h1>About</h1></main>
+  <tab>
+    <div id="section_box_desktop">
+      <main class="tab-inner">
+        <input type="radio" name="tabmenu" id="tab1" checked />
+        <input type="radio" name="tabmenu" id="tab2" />
+        <input type="radio" name="tabmenu" id="tab3" />
+        <input type="radio" name="tabmenu" id="tab4" />
+        <div class="content slide1">
+          <a href="#none">
+            <img src="./img/mbti.png" alt="mbti" />
+            <div class="tab_text">
+              <h2>리더의 성향 : ENTJ</h2>
+              <p>
+                ENTJ는 외향,직관,사교,판단력이 높게나온 사람을 나타내며 이러한
+                사람들은 대부분 팀내 리더 또는 지도자 역할을 가집니다
+                <br />ENTJ 키워드:호기심많음, 솔직함,계획적임,말하는 것을 좋아함
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="content slide2">
+          <a href="#none">
+            <img src="./img/축구.png" width="300" height="300" alt="축구" />
+            <div class="tab_text">
+              <h2>취미</h2>
+              <p>
+                다양한 스포츠 활동을 즐겨하지만 그중에서도 축구를 가장 좋아한다.
+                학창시절에 친하게 지냈던 친구들과 동호회를 만들어 하나의 팀을
+                꾸리고 있다 포지션은 포워드(원톱)으로 팀내부에서 득점왕으로
+                활동하고 있다. <br />(호날두보다는 메시)
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="content slide3">
+          <a href="#none">
+            <img src="./img/공부.png" width="300" height="300" alt="공부" />
+            <div class="tab_text">
+              <h2>공부를하게 된 계기</h2>
+              <p>
+                원래는 컴퓨터정보통신학과로 어느정도 프로그래밍 언어를 배우며,
+                관련 직종으로 취직하려는 생각이였지만, 좀 더 결과물에 대한 눈에
+                확 띄는 직업을 하고 하고싶어서 여기로 오게 되었습니다.
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="content slide4">
+          <a href="#none">
+            <img src="/img/말풍선.png" width="300" height="250" alt="slide03" />
+            <div class="tab_text">
+              <h2>좌우명</h2>
+              <p>
+                평소 사람들과 같이 어울리는 것을 좋아하다보니 깨달은 점이 한가지
+                있다면, 사람과 친해지려면 긍정적인 사고방식을 가져야한다고
+                생각합니다. 그렇기에 좌우명이라고 하기에는 너무 거창하지만 저의
+                좌우명은 한번밖에 없는 인생 즐겁게 살아보자입니다.
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="btn">
+          <label for="tab1">1</label>
+          <label for="tab2">2</label>
+          <label for="tab3">3</label>
+          <label for="tab4">4</label>
+        </div>
+      </main>
+      <main class="skill-progress">
+        <h1>나의 성향 데이터</h1>
+        <section class="item">
+          <article>
+            <span>자신감</span>
+            <span>100%</span>
+          </article>
+          <article class="progress">
+            <div class="progress-level"></div>
+          </article>
+        </section>
+        <section class="item">
+          <article>
+            <span>의지</span>
+            <span>80%</span>
+          </article>
+          <article class="progress">
+            <div class="progress-level"></div>
+          </article>
+        </section>
+        <section class="item">
+          <article>
+            <span>책임감</span>
+            <span>100%</span>
+          </article>
+          <article class="progress">
+            <div class="progress-level"></div>
+          </article>
+        </section>
+        <section class="item">
+          <article>
+            <span>재능</span>
+            <span>10%</span>
+          </article>
+          <article class="progress">
+            <div class="progress-level"></div>
+          </article>
+        </section>
+        <section class="item">
+          <article>
+            <span>노력</span>
+            <span>95%</span>
+          </article>
+          <article class="progress">
+            <div class="progress-level"></div>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <!-- <div id="section_box_mobile">
+      <main class="tab-inner">
+        <input type="radio" name="tabmenu" id="tab1" checked />
+        <input type="radio" name="tabmenu" id="tab2" />
+        <input type="radio" name="tabmenu" id="tab3" />
+        <input type="radio" name="tabmenu" id="tab4" />
+        <div class="content slide1">
+          <a href="#none">
+            <img
+              src="./img/mbti-removebg-preview.png"
+              width="150"
+              height="150"
+              alt="slide01"
+            />
+            <div class="tab_text">
+              <h2>리더의 성향 : ENTJ</h2>
+              <p>
+                ENTJ는 외향,직관,사교,판단력이 높게나온 사람을 나타내며 이러한
+                사람들은 대부분 팀내 리더 또는 지도자 역할을 가집니다
+                <br />ENTJ 키워드:호기심많음, 솔직함,계획적임,말하는 것을 좋아함
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="content slide2">
+          <a href="#none">
+            <img
+              src="./img/축구-removebg-preview.png"
+              width="150"
+              height="150"
+              alt="slide01"
+            />
+            <div class="tab_text">
+              <h2>취미</h2>
+              <p>
+                다양한 스포츠 활동을 즐겨하지만 그중에서도 축구를 가장 좋아한다.
+                학창시절에 친하게 지냈던 친구들과 동호회를 만들어 하나의 팀을
+                꾸리고 있다 포지션은 포워드(원톱)으로 팀내부에서 득점왕으로
+                활동하고 있다. <br />(호날두보다는 메시)
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="content slide3">
+          <a href="#none">
+            <img
+              src="./img/공부-removebg-preview (1).png"
+              width="150"
+              height="150"
+              alt="slide03"
+            />
+            <div class="tab_text">
+              <h2>공부를하게 된 계기</h2>
+              <p>
+                원래는 컴퓨터정보통신학과로 어느정도 프로그래밍 언어를 배우며,
+                관련 직종으로 취직하려는 생각이였지만, 좀 더 결과물에 대한 눈에
+                확 띄는 직업을 하고 하고싶어서 여기로 오게 되었습니다.
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="content slide4">
+          <a href="#none">
+            <img
+              src="./img/말풍선-removebg-preview.png"
+              width="150"
+              height="100"
+              alt="slide03"
+            />
+            <div class="tab_text">
+              <h2>좌우명</h2>
+              <p>
+                평소 사람들과 같이 어울리는 것을 좋아하다보니 깨달은 점이 한가지
+                있다면, 사람과 친해지려면 긍정적인 사고방식을 가져야한다고
+                생각합니다. 그렇기에 좌우명이라고 하기에는 너무 거창하지만 저의
+                좌우명은 한번밖에 없는 인생 즐겁게 살아보자입니다.
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="btn">
+          <label for="tab1">1</label>
+          <label for="tab2">2</label>
+          <label for="tab3">3</label>
+          <label for="tab4">4</label>
+        </div>
+      </main>
+      <main class="skill-progress">
+        <h1>나의 성향 데이터</h1>
+        <section class="item">
+          <article>
+            <span>자신감</span>
+            <span>100%</span>
+          </article>
+          <article class="progress">
+            <div class="progress-level"></div>
+          </article>
+        </section>
+        <section class="item">
+          <article>
+            <span>의지</span>
+            <span>80%</span>
+          </article>
+          <article class="progress">
+            <div class="progress-level"></div>
+          </article>
+        </section>
+        <section class="item">
+          <article>
+            <span>책임감</span>
+            <span>100%</span>
+          </article>
+          <article class="progress">
+            <div class="progress-level"></div>
+          </article>
+        </section>
+        <section class="item">
+          <article>
+            <span>재능</span>
+            <span>10%</span>
+          </article>
+          <article class="progress">
+            <div class="progress-level"></div>
+          </article>
+        </section>
+        <section class="item">
+          <article>
+            <span>노력</span>
+            <span>95%</span>
+          </article>
+          <article class="progress">
+            <div class="progress-level"></div>
+          </article>
+        </section>
+      </main>
+    </div> -->
+  </tab>
+  <main id="footer">
+    <h1>Contact</h1>
+    <div class="slider">
+      <div class="slides">
+        <img src="./img/네이버-removebg-preview.png" alt="Image 1" />
+        <img src="./img/google1-removebg-preview.png" alt="Image 2" />
+        <img src="./img/github9775-removebg-preview.png" alt="Image 3" />
+        <img src="./img/vs코드-removebg-preview.png" alt="Image 4" />
+      </div>
+
+      <div class="slider-buttons">
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="dots">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+  </main>
+</html>
