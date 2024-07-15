@@ -1,0 +1,24 @@
+미디어쿼리를 반대로 작성하면 안됨.
+
+max-width:780 ,360
+이러한 것들은 큰 사이즈부터코딩을 시작해야한다.
+
+win은 반대로 .
+
+js 변수 선언 이름은 var let const 중 한가지.
+
+var
+//a=test = 카운팅
+//b=test = 유효성
+//전역변수 / 지역변수
+
+let &const
+
+슬라이더에 대한 참고사항
+https://kenwheeler.github.io/slick/
+https://cdnjs.com/
+contents delivery network
+= 개발자들이 자주 사용하는 라이브러리 소스들의 업로드공간
+https://wowjs.uk/
+
+변수쪽에 $=제이쿼리
