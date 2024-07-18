@@ -1,0 +1,43 @@
+grid-area:시자가는 행 라인/시작하는 열 라인 / 종료하는 행 라인 / 종료하는 열라인
+(*최종 완료된 박스 구조를 기준으로 라인을 찾아서 설정)
+
+grid-row 각 아이템 행의 위치를 재정렬 가능(행 중심으로 위치변경)
+
+order: 각 아이템의 순서 및 위치를 재 정렬 가능(행에 국한되지 않고 위치변경)
+
+justify-content
+
+justify-items
+
+justify: 수평 / 가로 암시 &의미
+
+content: 묶여있는 그룹 자체
+
+item: 개별적인 요소
+
+display:flex가 나오면 justify-content 대부분사용된다
+> 자식요소는 무조건 반드시 부모요소의 플렉스박스 안에서 영향을 받을 수 밖에 없는 하나의 그룹
+
+display:grid
+grid-template-column:repeat(3,1fr)
+
+grid-template-row
+
+nesting / if /for / 함수 / 변수기타 등등
+웹 브라우저 html,css,js
+complier
+
+scss 확장자 = Live Sass Compiler
+
+1.scss = 네스팅: 부모 > 자식요소로 중첩되어있는 스타일 시트
+2.variables: 변수를 선언하는 방법 $변수명:깂 => 해당 변수명 바로 사용가능!
+3 comments: css에서 주석 처리하는 방식과 같은일
+4) @at-root: 부모요소 아래에 있는 특정 요소의 스타일을 전역요소로 사용하고 싶은 경우 >( div > h2(스타일))+h2
+
+5)reset.css+style.css => @import url("./) = >css
+scss에서는 외부 scss 파일을 가져올 때 @import만으로도 충분히 찾아올수잇다.
+
+@mixin:어떤반복적으로 사용되는 스타일을 정의해놓는 것 
+@include 명령어를 활용해서 @mixin으로 설정해놓은 스타일을 언제든지 가져다 사용할 수 있음
+
+

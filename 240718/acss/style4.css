@@ -1,0 +1,83 @@
+/*reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*content*/
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+body .btns button.complete {
+  width: 150px;
+  padding: 7px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 18px;
+  background: #fff;
+  font-size: 18px;
+  color: royalblue;
+  border: 3px solid royalblue;
+}
+body .btns button.complete.complete:hover {
+  background: royalblue;
+  color: #fff;
+  border: 3px solid transparent;
+}
+body .btns button.complete.complete:hover.error:hover {
+  background: royalblue;
+  color: #fff;
+  border: 3px solid transparent;
+}
+body .btns button.complete.loading {
+  width: 150px;
+  padding: 7px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 18px;
+  background: #fff;
+  font-size: 18px;
+  color: royalblue;
+  border: 3px solid royalblue;
+}
+body .btns button.complete.loading.complete:hover {
+  background: royalblue;
+  color: #fff;
+  border: 3px solid transparent;
+}
+body .btns button.complete.loading.complete:hover.error:hover {
+  background: royalblue;
+  color: #fff;
+  border: 3px solid transparent;
+}
+body .btns button.complete.error {
+  width: 150px;
+  padding: 7px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 18px;
+  background: #fff;
+  font-size: 18px;
+  color: royalblue;
+  border: 3px solid royalblue;
+}
+body .btns button.complete.error.complete:hover {
+  background: royalblue;
+  color: #fff;
+  border: 3px solid transparent;
+}
+body .btns button.complete.error.complete:hover.error:hover {
+  background: royalblue;
+  color: #fff;
+  border: 3px solid transparent;
+}
