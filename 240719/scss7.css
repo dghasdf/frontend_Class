@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ul {
+  list-style: none;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+}
+body .icon {
+  display: flex;
+  gap: 20px li;
+}
