@@ -1,0 +1,49 @@
+@mixin : 공통적 및 반복적으로 사용하고자 하는 어떤 스타일 속성을 미리 정의해놓는 명령어
+@include:mixin으로 정의된 스타일 속성을 찾아와서 사용하고자 할 때 사용하는 명령어
+@extend: 사전에 정의해놓은 스타일 속성을 사용할 수있도록 하는 것
+=> css 파일로 컴파일링 된 이후에 결과값
+각각의 선택자에 mixin으로 정의해놓았던 스타일 속성에 해당 선택자안에서 작성된 것을 확인
+
+extend를 활용해서 정의해놓은 스타일 속성에 각각의 선택자를 불러와서 사용하는 방법
+
+함수 = function 기능
+선언(어떤 기능이 필요하기 때문에 그, 기능을 구현 & 실행시켜줄 수 있는 무언가가 필요할 때 해당 기능을 다양한 알고리즘과 자료구조의
+조합을 통해 문제해결을 위한 새로운 기능을 만들어내는 것 // 
+
+=매개변수 3개
+
+호출 = 앞에서 선언한 함수를 가져다가 사용하는 것 
+
+선언 후 호출임 무조건.
+
+=> 함수를 선언할 때 매개변수라는 것을 생성(o || x)
+=> 로또 번호 6개를 생성해주는 함수를 선언
+js숫자를 랜덤으로 생성해주는 내장객체(함수)를 가져다가사용만하면 된다.
+
+>인자값 = 인수 3개
+
+매개변수를3개인데 인자값이 다를경우 오류가 생김. 무조건 같은 갯수이여야 한다.
+
+react.js = react
+
+반복문 = 변수선언 / 변수 앞에 $
+js가 변수 선언 시, 원칙이 있다.
+= 절대로 특수문자가 앞에 올 수 없음
+>$
+forEach
+for
+for in,of
+
+이터러블: 변수선언(1개의 변수명 안에 복수의 값을 설정) => map-get()사용
+
+조건문
+if / else if / else
+switch
+while
+
+https://fonts.google.com/icons?selected=Material+Symbols+Outlined:power_settings_new:FILL@0;wght@400;GRAD@0;opsz@24&icon.query=off&icon.size=24&icon.color=%235f6368
+
+"https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined"
+
+
+
