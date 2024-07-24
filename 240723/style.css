@@ -1,0 +1,145 @@
+/* reset */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* font */
+/* variable */
+/* common */
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #222;
+  background: #fff;
+}
+body .cd-section {
+  height: 100vh;
+}
+body .cd-section > div {
+  height: 100%;
+  position: relative;
+}
+body .cd-section > div .content {
+  background: #ddd;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  width: calc(100% - 40px);
+  height: calc(100% - 80px);
+  overflow: hidden;
+}
+
+/* Awards */
+.awards-inner {
+  height: 100%;
+  border: 1px solid #ddd;
+  display: flex;
+}
+.awards-inner > div {
+  flex: 1;
+  height: 100%;
+  position: relative;
+}
+.awards-inner > div.about-awards {
+  background: #1a1f24;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.awards-inner > div.about-awards .about-heading {
+  text-align: center;
+  width: 70%;
+}
+.awards-inner > div.about-awards .about-heading .bar {
+  width: 50px;
+  height: 4px;
+  background: #dc143c;
+  border: none;
+  margin: 30px auto;
+}
+.awards-inner > div.about-awards .about-heading p {
+  color: #999;
+  font: 400 17px/1.5rem "Montserrat", sans-serif;
+  margin-bottom: 30px;
+}
+.awards-inner > div.about-awards .about-heading .view-awards {
+  color: #ddd;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 5px 15px;
+  transition: all 0.5s;
+}
+.awards-inner > div.about-awards .about-heading .view-awards:hover {
+  color: #fff;
+  background: #31c0ce;
+  border: 1px solid transparent;
+}
+.awards-inner > div.victory-jump {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.awards-inner > div.victory-jump img {
+  width: 80%;
+}
+
+/* Location */
+.location-inner {
+  background: url("./images/background-location.jpg") center/cover no-repeat;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.location-inner::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+}
+.location-inner .feature {
+  position: relative;
+  color: #ddd;
+  display: flex;
+  gap: 100px;
+}
+.location-inner .feature .office {
+  flex: 3;
+}
+.location-inner .feature .office b {
+  text-transform: uppercase;
+  font-weight: normal;
+}
+.location-inner .feature .office h2 {
+  color: #1db1f0;
+  font-weight: 500;
+  margin-top: 5px;
+}
+.location-inner .feature .office p {
+  font: normal 16px/2.4rem "Montserrat", sans-serif;
+}
+.location-inner .feature .service {
+  flex: 2;
+}
