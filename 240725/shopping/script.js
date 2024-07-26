@@ -1,7 +1,7 @@
 // import products from "./products.js";
 // console.log(products.data[0].img);
 
-const productInfo = "./products.json";
+const productInfo = "https://my-json-server.typicode.com/typicode/demo/db";
 fetch(productInfo)
   .then((response) => response.json())
   .then((data) => {
@@ -50,6 +50,11 @@ fetch(productInfo)
       div.append(h3, span);
       li.append(img, div);
       ul.appendChild(li);
+
+      li.addEventListener("click", () => {
+        const url = `product-detail.html?category=${product.category}&name=${encodeURIComponent(product.name)`;
+        window.location.href = "url";
+      });
     };
 
     // Importing Items
@@ -158,3 +163,44 @@ fetch(productInfo)
   .catch((error) => {
     console.log(error);
   });
+
+//채널
+
+(function () {
+  var w = window;
+  if (w.ChannelIO) {
+    return w.console.error("ChannelIO script included twice.");
+  }
+  var ch = function () {
+    ch.c(arguments);
+  };
+  ch.q = [];
+  ch.c = function (args) {
+    ch.q.push(args);
+  };
+  w.ChannelIO = ch;
+  function l() {
+    if (w.ChannelIOInitialized) {
+      return;
+    }
+    w.ChannelIOInitialized = true;
+    var s = document.createElement("script");
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = "https://cdn.channel.io/plugin/ch-plugin-web.js";
+    var x = document.getElementsByTagName("script")[0];
+    if (x.parentNode) {
+      x.parentNode.insertBefore(s, x);
+    }
+  }
+  if (document.readyState === "complete") {
+    l();
+  } else {
+    w.addEventListener("DOMContentLoaded", l);
+    w.addEventListener("load", l);
+  }
+})();
+
+ChannelIO("boot", {
+  pluginKey: "aef5feb7-078e-423f-a3cb-444c95d77fb3",
+});
