@@ -1,0 +1,88 @@
+@import url(./common.css);
+
+/* 장바구니 진행도UI */
+#cart_header {
+  width: 1920px;
+  height: 230px;
+  .inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 29px;
+    border: 1px solid #f00;
+  }
+  .header_text {
+    display: flex;
+    justify-content: center;
+  }
+  .header_icon {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+  }
+
+  .fa-shopify,
+  .fa-credit-card,
+  .fa-truck {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 90px;
+    font-size: 45px;
+    border-radius: 90px;
+    color: var(--white);
+    background: var(--main-btn-green);
+  }
+  .fa-chevron-right {
+    width: 12px;
+    height: 16px;
+    color: var(--main-btn-green);
+  }
+
+  h2 {
+    font-size: 14px;
+  }
+}
+
+/* 탭전환 */
+#tab {
+  width: 1920px;
+  height: 72px;
+  margin: 0 auto;
+  .tab_inner {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    .tab_inner {
+    }
+  }
+  .box {
+    display: flex;
+    width: 650px;
+    height: 72px;
+    justify-content: center;
+    align-items: center;
+    background: var(--main-btn-green);
+    h3 {
+      color: var(--white);
+      font-size: var(--font-title-26px);
+    }
+  }
+  .today_box {
+    display: flex;
+    width: 650px;
+    height: 72px;
+    justify-content: center;
+    align-items: center;
+    background: var(--main-btn-green);
+    h3 {
+      color: var(--white);
+      font-size: var(--font-title-26px);
+    }
+  }
+}
