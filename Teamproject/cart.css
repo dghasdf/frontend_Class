@@ -54,7 +54,7 @@
   width: 1920px;
   height: 72px;
   margin: 0 auto;
-  .tab_inner {
+  + .tab_inner {
     display: flex;
     justify-content: center;
     margin-top: 15px;
