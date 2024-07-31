@@ -176,8 +176,36 @@ a일때 무언가 그런데 그게 아니면 무언가
 if문(단독으로 여러번 사용가능)
 if else(반드시 조건식 true여야지만 실행 그렇지 않은 경우 else실행)
 else if문(복수의 조건식을 따지고자 할 때!)
-삼항조건 연산자
+삼항조건 연산자 ? :
 switch문
+-선택할 수 있는 조건들이 다양한 경우
+switch() / case / break / default
+
+반복문
+-기본 for문
+-foreach문
+-for...in문
+for---of문
+
+while문
+do while문 = ~을해라.
+
+
+-break문
+-continue문
+
+>iterable한 자료형만 사용할 수 있음
+>반복시킬 수 있는 자료형
+>iterable한 속성 > inerator 객체 만의 전유물
+>객체,배열
+>set()
+>css:애니메이션 : 반복할 수 있는 iteration
+
+callback: 클로져 = >기능적인 의미를 내포하고 있는 명칭
+
+function(일반함수)
+
+arrow funtion(화살표함수 =>) : 하드웨어적인 의미를 내포하고 있는 명칭
 
 프로그래밍 언어
 실행문 // 표현식문 =>다중패러다임언어
@@ -189,5 +217,14 @@ switch문
 프로그래밍 코드 작성 // 실행
 객체지향 // 절차지향
 
+js 진영 2가지 모듈!!!
+> 모듈 = 레고 "블럭"
+>comin js모듈 : Node
+>ESM 모듈 : 공식모듈
 
+cs 기본개념
+1)Variable
+2) Scope = 범위
+전역 => Global : 1번만 작성해놓으면 언제 어디서든 가져다가 사용가능
+wldur => Local : 특정 범위 안에서 설정, 그 범위 안에서만 사용 가능.
   

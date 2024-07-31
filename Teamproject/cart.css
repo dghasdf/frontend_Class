@@ -1,88 +1,88 @@
 @import url(./common.css);
 
-/* 장바구니 진행도UI */
-#cart_header {
+/* title */
+.title {
   width: 1920px;
   height: 230px;
+  justify-content: center;
+  align-items: center;
   .inner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 29px;
-    border: 1px solid #f00;
-  }
-  .header_text {
-    display: flex;
-    justify-content: center;
-  }
-  .header_icon {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    gap: 45px;
-  }
-
-  .fa-shopify,
-  .fa-credit-card,
-  .fa-truck {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 90px;
-    height: 90px;
-    font-size: 45px;
-    border-radius: 90px;
-    color: var(--white);
-    background: var(--main-btn-green);
-  }
-  .fa-chevron-right {
-    width: 12px;
-    height: 16px;
-    color: var(--main-btn-green);
-  }
-
-  h2 {
-    font-size: 14px;
+    width: 100%;
+    height: 100%;
+    .cart_container {
+      width: 100%;
+      height: 100%;
+      gap: 29px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .cart_text {
+        font-size: 40px;
+      }
+      .icon {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        gap: 45px;
+        margin-bottom: 5px;
+        .icon_arrow {
+          width: 12px;
+          height: 16px;
+          color: var(--main-btn-green);
+        }
+        .cart_icon {
+          width: 90px;
+          height: 90px;
+          font-size: 40px;
+          border-radius: 100%;
+          background: var(--main-btn-green);
+          color: var(--white);
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+    }
   }
 }
 
-/* 탭전환 */
-#tab {
-  width: 1920px;
-  height: 72px;
-  margin: 0 auto;
-  + .tab_inner {
+/* list */
+.list {
+  display: flex;
+  .inner {
     display: flex;
-    justify-content: center;
-    margin-top: 15px;
-    .tab_inner {
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #f00;
+    .list_box {
+      display: flex;
+      width: 985px;
+      height: 1200px;
     }
-  }
-  .box {
-    display: flex;
-    width: 650px;
-    height: 72px;
-    justify-content: center;
-    align-items: center;
-    background: var(--main-btn-green);
-    h3 {
-      color: var(--white);
-      font-size: var(--font-title-26px);
+    .image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 180px;
+      height: 240px;
+      border: 1px solid #f00;
     }
-  }
-  .today_box {
-    display: flex;
-    width: 650px;
-    height: 72px;
-    justify-content: center;
-    align-items: center;
-    background: var(--main-btn-green);
-    h3 {
-      color: var(--white);
-      font-size: var(--font-title-26px);
+    .text {
+      width: 804px;
+      height: 240px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border: 1px solid #f00;
+      .money {
+        display: flex;
+        flex-direction: column;
+        right: 100%;
+        border: 1px solid #f00;
+      }
     }
   }
 }
