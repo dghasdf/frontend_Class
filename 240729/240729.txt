@@ -236,6 +236,11 @@ arrow funtion(화살표함수 =>) : 하드웨어적인 의미를 내포하고 �
 발생시키지않음
 5.return: a함수의 결과값을 b라는 함수 혹은 외부에서 찾아서 사용할 수 있도록 해주는 명령어!
 
+
+콜백함수 call(호출)back(다시) =>재호출
+함수가 호출되는 타이밍을 부모 함수에게 그 권한을 양도
+함수안에 함수 =>콜백함수
+
 선언형 // 명령형
 
 프로그래밍 코드 작성 // 실행
@@ -255,4 +260,56 @@ wldur => Local : 특정 범위 안에서 설정, 그 범위 안에서만 사용 
 Block // 특정 제어문의 조건식 안에서 설정된 변수들은 block 범위에서만 움직임
 
 script // 전역변수처럼 행동 let ,const
-  
+
+매개변수 & 인자값 => 전개연산자
+spread Operator
+=> map // json 데이터  id 값(*원본 데이터 유지 + 생성된)
+=> 참조타입 =>
+=> 매개변수 개수 제한요소
+
+시간 내장 함수
+1.콜백함수를 사용할 수 있음
+2 this 객체를 사용했을 때 지칭하는 것이 window
+setinterball() = 특정 시간에 맞춰서 무언가 반복적으로 자동실행하도록 해주고 싶을때
+settimout() = 셋인터벌함수를 통해서 반복실행되고 있는 해당 함수를 정지시켜줄 수 있는 단짝친구
+clearintervall()  특정시간에 무언가를 시작하고자할때
+
+6.DOM
+- dom이란?
+-태생적으로 구조 & 스타일
+-html css(정적인구조) +js(html,css를 찾아와서 동적인 기능을부여)
+-html,css웹 에디터를 통해서 작성하는 순간 =>객체
+
+BOM > DOM
+dom = bocument object model (문서 객체모델)
+dom tree
+
+BOM = browser object model(브라우저 객체모델)
+=>콘솔 >window
+js > 태그 x > node라고 불러야함
+
+html을 통해서 코드 = 태그 =>html 문법 속에서 지칭하는 단어
+
+querySelector
+querySelectorAll
+querySelectors
+querySelecto
+querySelecto
+
+dom에서 어떤 node를 찾아와서 해당 node 안에 포함된 요소를 가져오고 싶을 때
+1) innerhtml : html 요소 + text의 모든걸 찾아옴
+>dom에 있는 html 요소 + text =>html 적용 +text
+
+2) innertext : 특정 노드 안에 담김 text 요소만 찾아옴
+>html 안에 들어가 있는 텍스트를 추출해서 텍스트만 출력
+
+3) textcontent => html태그만 걷어내는 상태
+
+<모달창>
+
+가상클래스 : 스위치 역할
+A면 불이켜지고  B면 불이꺼진다
+클래스가 적용되어 있으면 불이켜지고 클래스가 사라지면 불이 꺼진다.
+
+classList=>속성: 특정 노드에 class 여부 유무체크.
+contains=>메소드 : 특정 클래스가 있으면 true / 없으면 false
