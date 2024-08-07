@@ -1,0 +1,25 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  .star-rating {
+    gap: 10px;
+    display: flex;
+    background: #333;
+    border: 5px;
+    border-radius: 5px;
+    width: 250px;
+    justify-content: center;
+    .stars .fa-star {
+      cursor: pointer;
+      // 스타에 액티브를 할시 색상이 변경된다. html에 active 넣어보자.
+      &.active {
+        color: yellow;
+      }
+    }
+    .print {
+      color: #fff;
+    }
+  }
+}
