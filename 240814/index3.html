@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/d0d7b265e4.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- custom css & js -->
+    <link rel="stylesheet" href="./style3.css" />
+    <script defer src="./script3.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <nav>
+          <div class="logo">
+            <img
+              style="width: auto"
+              height="60px"
+              src="./img/Netflix-Logo.jpg"
+              alt=""
+            />
+          </div>
+          <div class="scarch_box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </nav>
+      </header>
+      <section class="movie"></section>
+      <section class="faq">
+        <div class="faq_inner">
+          <h1>자주 묻는 질문</h1>
+          <div class="accodion">
+            <div class="title  active">넷플릭스란 무엇인가요?</div>
+            <div class="content">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatibus culpa iusto harum provident voluptas animi blanditiis
+              quas, minus eum est quod recusandae veritatis possimus natus nemo
+              sunt praesentium tenetur molestias!
+            </div>
+            <div class="title">넷플릭스 요금은 얼마인가요?</div>
+            <div class="content">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatibus culpa iusto harum provident voluptas animi blanditiis
+              quas, minus eum est quod recusandae veritatis possimus natus nemo
+              sunt praesentium tenetur molestias!
+            </div>
+            <div class="title">어디에서 시청할 수 있나요?</div>
+            <div class="content">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatibus culpa iusto harum provident voluptas animi blanditiis
+              quas, minus eum est quod recusandae veritatis possimus natus nemo
+              sunt praesentium tenetur molestias!
+            </div>
+            <div class="title">멤버십을 해지하려면 어떻게 해야하나요?</div>
+            <div class="content">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatibus culpa iusto harum provident voluptas animi blanditiis
+              quas, minus eum est quod recusandae veritatis possimus natus nemo
+              sunt praesentium tenetur molestias!
+            </div>
+            <div class="title">
+              넥플릭스에서 어떤 콘텐츠를 시청할 수 있나요?
+            </div>
+            <div class="content">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatibus culpa iusto harum provident voluptas animi blanditiis
+              quas, minus eum est quod recusandae veritatis possimus natus nemo
+              sunt praesentium tenetur molestias!
+            </div>
+            <div class="title">아이들이 넥플릭스를 봐도 좋을까요?</div>
+            <div class="content">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatibus culpa iusto harum provident voluptas animi blanditiis
+              quas, minus eum est quod recusandae veritatis possimus natus nemo
+              sunt praesentium tenetur molestias!
+            </div>
+          </div>
+          <div class="newsletter">
+            <p>
+              시청할 준비가 되셨나요?<br />멤버십을 등록하거나 재시작하려면
+              이메일 주소를 입력하세요.
+            </p>
+            <form action="http://127.0.0.1:5500" method="get">
+              <input type="text" name="emailAddress" id="emailAddress" />
+              <input type="submit" value="시작하기" />
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div class="modal_search act">
+      <div class="close">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <div class="search ">
+        <form action="http://127.0.0.1:5500" method="get">
+          <input
+            type="text"
+            name="search_box"
+            id="search_box"
+            placeholder="보고싶은 영화를 검색하세요"
+          />
+          <input type="submit" value="Search" />
+        </form>
+        <p class="hash_tag">
+          #오징어게임시즌2 #파리올림픽 #넷플릭스 #범죄도시4 #실시간생중계
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

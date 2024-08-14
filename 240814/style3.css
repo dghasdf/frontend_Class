@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html {
+  font-size: 14px;
+  background: #000;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  background: #000;
+}
+header nav {
+  width: 900px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav .logo {
+  width: auto;
+  height: 60px;
+}
+header nav .scarch_box i {
+  cursor: pointer;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.movie {
+  width: 100%;
+  height: 1200px;
+  height: calc(100vh - 80px);
+  background: url(https://image-cdn.hypb.st/https%3A%2F%2Fkr.hypebeast.com%2Ffiles%2F2020%2F10%2Freasons-results-netflix-korean-dramas-original-sponsored-contents-kingdom-extracurricular-new-01.jpg?w=1260&cbr=1&q=90&fit=max) center/cover no-repeat;
+}
+
+.faq {
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  color: #fff;
+}
+.faq .faq_inner {
+  width: 700px;
+  margin: 0 auto;
+}
+.faq .faq_inner h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+.faq .faq_inner .accodion {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+.faq .faq_inner .accodion .title {
+  width: 100%;
+  font-weight: bold;
+  margin-bottom: 8px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s;
+  padding: 10px;
+}
+.faq .faq_inner .accodion .title::after {
+  content: "+";
+  font-family: "fontawesome";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s;
+  padding: 10px;
+}
+.faq .faq_inner .accodion .title.active {
+  background: #353b48;
+}
+.faq .faq_inner .accodion .title.active::after {
+  transform: translateY(-50%) rotate(45deg);
+}
+.faq .faq_inner .accodion .content {
+  font-size: 1rem;
+  margin-bottom: 16px;
+  padding: 10px;
+  display: none;
+}
+.faq .faq_inner .newsletter {
+  width: 100%;
+  text-align: center;
+}
+.faq .faq_inner .newsletter p {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.faq .faq_inner .newsletter form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.faq .faq_inner .newsletter form input[type=text] {
+  border: none;
+  height: 60px;
+  padding-left: 10px;
+  font-size: 1.4rem;
+  flex: 3;
+}
+.faq .faq_inner .newsletter form input[type=text]:focus {
+  outline: none;
+}
+.faq .faq_inner .newsletter form input[type=submit] {
+  background: #dc143c;
+  color: #fff;
+  border: none;
+  height: 60px;
+  font-size: 1.4rem;
+  flex: 1;
+}
+
+.modal_search {
+  width: 100%;
+  height: 300px;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: -300px;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+}
+.modal_search.active {
+  top: 0;
+}
+.modal_search .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.modal_search .close i {
+  color: #353b48;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.modal_search .search {
+  width: 500px;
+}
+.modal_search form {
+  display: flex;
+}
+.modal_search form input[type=text] {
+  flex: 5;
+  padding: 15px;
+  border: none;
+}
+.modal_search form input[type=text]:focus {
+  outline: none;
+}
+.modal_search form input[type=text]:focus::-moz-placeholder {
+  opacity: 0;
+}
+.modal_search form input[type=text]:focus::placeholder {
+  opacity: 0;
+}
+.modal_search form input[type=text]::-moz-placeholder {
+  font-style: italic;
+  opacity: 1;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.modal_search form input[type=text]::placeholder {
+  font-style: italic;
+  opacity: 1;
+  transition: all 0.3s;
+}
+.modal_search form input[type=text]::before {
+  content: "1";
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.modal_search form input[type=submit] {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  background: #dc143c;
+  color: #fff;
+  opacity: 0.9;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.modal_search form input[type=submit]:hover {
+  opacity: 1;
+}
+.modal_search::before {
+  content: "";
+  font-family: "fontawesome";
+  color: #777;
+  position: absolute;
+  top: 20%;
+  left: 8px;
+  transform: translateY(-90%);
+  font-size: 1.2rem;
+}
+.modal_search .hsh-tag {
+  font-size: 1rem;
+  color: #ff0;
+  margin-top: 10px;
+  opacity: 0;
+  transition: all 0.3s;
+}
