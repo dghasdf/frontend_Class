@@ -1,0 +1,16 @@
+1.문자열
+*charAt()
+*indexOf()
+startsWith()
+endsWith()
+*includes()
+trim()
+trimstart()
+trimEnd()
+*toUpperCase() 대문자변경
+*toLowerCase() 소문자변경
+*substring() 인자값 두개받을 수 있음
+*slice()
+.split()
+2.정규표현식
+3.배열
