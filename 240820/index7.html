@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="./script7.js"></script>
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: 0;
+      }
+      ul,
+      li {
+        list-style: none;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: url("./img/background\ \(3\).jpg") center / cover no-repeat;
+        .inner {
+          width: 900px;
+          height: 600px;
+          background: rgba(0, 0, 0, 0.5);
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+          .container {
+            padding-bottom: 20px;
+            button {
+              padding: 10px 20px;
+              height: 50px;
+              background: #000;
+              color: #fff;
+              cursor: pointer;
+            }
+          }
+          .user_list {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.4rem;
+            width: 500px;
+            gap: 20px;
+            height: 400px;
+            background: rgba(255, 255, 255, 0.5);
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="inner">
+      <div class="container">
+        <button class="button" data-age="20">20세 이상</button>
+        <button class="button" data-age="30">30세 이상</button>
+        <button class="button" data-age="40">40세 이상</button>
+      </div>
+      <ul class="user_list"></ul>
+    </div>
+  </body>
+</html>
