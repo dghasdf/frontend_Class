@@ -1,0 +1,36 @@
+App.js > logo
+
+모든 요소들이 Component 기반으로 운영
+Component = JS
+
+React의 기본문법 = JSX
+> javascript & xml
+
+1. 출력부의 공간에는 반드시 숫자,문자형태의 자료형 가능 절대 객체 그자체는 가져올 수 없음!!
+함수형 컴포넌트의 return 출력부 = UI화면 출력 = 절대로 객체 형태로는 직접절대 x
+
+2. 산술 및 문자표현식이 가능하다(사칙연산)
+
+3. 논리표현식 = boolean
+
+4. 닫힘표현식 = 싱글태그인것처럼 표현
+5. 무조건, 최상위 부모가 반드시 존재해야한다.
+-Fragment Element  = 아무런 의미가 없는 태그
+
+6.html = class // className
+
+7.React 전용 스타일 컴포넌트 => styled-component //scss
+
+8. React & CSS 스타일시트 역시 외부 스타일시트 & 인라인
+
+9. React 출력부는 문 사용불가!!! 
+
+10 React > Props => Propertys 약어
+> component 기반 = > 각각의 컴포넌트간에 props 전달하고 받을 수 있음
+>props는 반드시 부모에서 자식으로 일반통행
+>유틸리티!! =>Redux // Saga // Thunk => 미들웨어
+> React Query 등등
+>속성 = 객체
+>구조분해할당
+>defaultProps 속성 = 만약에라도 누락된 데이터가 있다면 대체가능
+>props를 통해서 컴포넌트도 보낼 수 있음
