@@ -1,11 +1,14 @@
-import React, { useState, useRef } from "react";
-import "./TodoList";
+import React, { useState, useRef, useContext } from "react";
+import { TodoContext } from "../App";
+import "./TodoEditor.css";
 
-const TodoEditor = ({ onCreate }) => {
+const TodoEditor = () => {
+  const { onCreate } = useContext(TodoContext);
   const [content, setContent] = useState("");
   const inputRef = useRef();
+
   const onChangeContent = (e) => {
-    setContent(e.tartget.value);
+    setContent(e.target.value);
   };
 
   const onKeyDown = (e) => {
@@ -21,8 +24,8 @@ const TodoEditor = ({ onCreate }) => {
     setContent("");
   };
   return (
-    <div ClassName="TodoList">
-      <h4>새로운 Todo 작성하기</h4>
+    <div className="TodoEditor">
+      <h4>새로운 Todo 작성하기 🧾</h4>
       <div className="editor_wrapper">
         <input
           ref={inputRef}
