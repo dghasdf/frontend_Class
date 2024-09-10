@@ -1,0 +1,28 @@
+React.js 왜 사용하는가?
+- Component 기반 프로젝트 웹,앱 제작 // Module
+- Virtual DoM 효율적인 업데이트 // DOM의 대한 이해도가 잇어야함
+
+2. JSX문법 = Javascript XML문법
+- Props = property 약어 => 객체 (key + value)
+ property = 컴포넌트 간 데이터 자료를 주고 받을 때 함수의 인자 & 매개변수
+- props Drilling > Context > useContext
+
+- state = 상태 // 중요도 높음
+- setState()가 state를 관리해줌 //비동기
+
+TodoList = 입력값 처리함수(콜백함수,인자)
+
+자바스크립트는 태생적으로 싱글 스레드
+> 비동기
+
+콜백함수 => 비동기처리
+> 콜백의 의미?
+> 함수 제어 > 함수 호출 타이밍
+
+REST API
+
+-> 제품 (페이지_을 제작한다고 할때, 해당 페이지 안에 포함될 페이지들의 규칙성을 생성하고 제어 관리할 수 있도록 만들어놓은 시스템
+
+
+
+
