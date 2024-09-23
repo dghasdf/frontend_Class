@@ -1,0 +1,541 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav {
+  width: 100%;
+  height: 100%;
+  .container {
+    position: relative;
+    .logo {
+      img {
+        position: absolute;
+        width: 150px;
+        height: 100px;
+      }
+    }
+    .title {
+      width: 100%;
+      height: 100vh;
+      background: url("https://designcompass.org/wp-content/uploads/2024/03/paris-2024-olympic-03-1024x1024.png")
+        center/cover no-repeat;
+    }
+    .text {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      top: 300px;
+      left: 50%;
+      transform: translate(-50%);
+      position: absolute;
+      h1 {
+        color: #fff;
+        font-size: 75px;
+      }
+      h4 {
+        color: #fff;
+        transform: translate(20%);
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.main_title {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+  gap: 50px;
+  .title_img {
+    img {
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+    }
+  }
+  .title_text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: #000;
+    span {
+      font-size: 50px;
+    }
+    p {
+      text-align: center;
+      font-size: 20px;
+    }
+  }
+}
+
+.pictogramm {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  background: #efefef;
+  .pictogramm_container {
+    display: flex;
+    flex-direction: column;
+    .top {
+      text-align: center;
+      margin-bottom: 60px;
+      h1 {
+        color: #000;
+        font-size: 40px;
+        font-weight: bold;
+      }
+    }
+    .gramm {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 100px;
+      .pictogramm_Basketball {
+        width: 17%;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        border-radius: 30px 0 30px 0;
+        border: none;
+        overflow: hidden;
+        display: inline-block;
+        background: #fff;
+        img {
+          width: 76%;
+          padding: 20px 20px;
+          transition: transform 0.3s ease;
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+        .pictogramm_text {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          padding: 20px 20px;
+          background-color: #fff;
+          border-radius: 0px 0 30px 0;
+          border-top: 1px solid #eee;
+
+          span {
+            font-size: 17px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #000;
+            border-radius: 5px;
+          }
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+      .pictogramm_Football {
+        width: 17%;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        overflow: hidden;
+        display: inline-block;
+        border: none;
+        border-radius: 30px;
+        background-color: #fff;
+        img {
+          width: 76%;
+          padding: 20px 20px;
+          margin-bottom: 40px;
+          transition: transform 0.3s ease;
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+        .pictogramm_text {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          padding: 20px 20px;
+          gap: 20px;
+          background-color: #fff;
+          border-top: 1px solid #eee;
+          span {
+            font-size: 17px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #000;
+            border-radius: 5px;
+          }
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+      .pictogramm_Tennis {
+        width: 17%;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        overflow: hidden;
+        display: inline-block;
+        border-radius: 0 30px 0 30px;
+
+        background-color: #fff;
+        img {
+          width: 76%;
+          padding: 20px 20px;
+          transition: transform 0.3s ease;
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+        .pictogramm_text {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          background-color: #fff;
+          border-top: 1px solid #eee;
+          padding: 20px 20px;
+          span {
+            font-size: 17px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #000;
+            border-radius: 5px;
+          }
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.players_text {
+  padding-top: 20px;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid #efefef;
+  .player_container {
+    width: 90%;
+    button {
+      color: #000;
+    }
+    .players {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .player {
+        display: flex;
+        img {
+          width: 120px;
+          height: 120px;
+          border-radius: 50%;
+          background: cover;
+        }
+        .player_introduction {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          span {
+            font-size: 18px;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+    .player_text {
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+    }
+  }
+}
+
+.player_box {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  margin-top: 150px;
+  .player_textt {
+  }
+  .contanier_box {
+    display: flex;
+    .player_container1 {
+      .player_poster1 {
+        display: flex;
+
+        margin: 30px;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: 400px;
+          height: 200px;
+          border-radius: 10px;
+        }
+        p {
+          text-align: center;
+        }
+      }
+      .player_poster2 {
+        display: flex;
+        margin: 30px;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: 400px;
+          height: 300px;
+          border-radius: 10px;
+        }
+      }
+      .player_poster3 {
+        display: flex;
+        margin: 30px;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        img {
+          width: 400px;
+          height: 300px;
+          border-radius: 10px;
+        }
+      }
+    }
+    .player_container2 {
+      .player_poster4 {
+        margin: 50px;
+        img {
+          width: 600px;
+          height: 400px;
+        }
+        p {
+          text-align: center;
+        }
+      }
+      .player_poster5 {
+        margin: 50px;
+        img {
+          width: 600px;
+          height: 400px;
+        }
+        p {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 360px) {
+  .nav {
+    width: 100%;
+    height: auto; /* 높이를 자동으로 조절 */
+
+    .container {
+      .log {
+        /* 로고 스타일 */
+      }
+      .title {
+        /* 타이틀 스타일 */
+      }
+      .text {
+        text-align: center;
+        top: 200px;
+
+        h1 {
+          font-size: 50px; /* 모바일에서 제목 크기 조정 */
+        }
+        h4 {
+          transform: translate(10px);
+        }
+      }
+    }
+  }
+
+  .main_title {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    .title_img {
+      img {
+        width: 250px;
+        height: 250px;
+      }
+    }
+    .title_text {
+      text-align: center;
+      span {
+        font-size: 30px;
+      }
+      p {
+        text-align: center;
+        font-size: 16px;
+      }
+    }
+    /* 필요한 추가 스타일 */
+  }
+
+  .pictogramm {
+    width: 100%;
+    height: 1700px;
+    .pictogramm_container {
+      .top {
+        h1 {
+          font-size: 30px;
+        }
+      }
+      .gramm {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .pictogramm_Basketball {
+          width: 90%;
+          height: 500px;
+          .pictogramm_text {
+            width: 100%;
+          }
+        }
+        .pictogramm_Football {
+          width: 90%;
+          height: 500px;
+        }
+        .pictogramm_Tennis {
+          width: 90%;
+          height: 500px;
+        }
+      }
+    }
+  }
+
+  .players_text {
+    width: 100%;
+    height: 600px;
+    gap: 40px;
+    .player_container {
+      width: 100%;
+      margin: 10px;
+      .players {
+        gap: 10px;
+        .player {
+          display: flex;
+          flex-direction: column;
+          margin-right: 15px;
+          img {
+            width: 60px;
+            height: 60px;
+          }
+          .player_introduction {
+            span {
+              font-size: 14px;
+            }
+            p {
+              font-size: 11px;
+            }
+          }
+          .player_text {
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+  .player_box {
+    width: 100%;
+    height: 100%;
+    margin-top: 30px;
+    .contanier_box {
+      display: flex;
+      flex-direction: column;
+      .player_container1 {
+        .player_poster1 {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          margin-bottom: 50px;
+          img {
+            width: 100%;
+          }
+          p {
+            font-size: 15px;
+          }
+        }
+        .player_poster2 {
+          display: flex;
+          flex-direction: column-reverse;
+          margin-bottom: 50px;
+          img {
+            width: 100%;
+          }
+          p {
+            font-size: 15px;
+          }
+        }
+        .player_poster3 {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 50px;
+          img {
+            width: 100%;
+          }
+          p {
+            font-size: 13px;
+          }
+        }
+      }
+      .player_container2 {
+        .player_poster4 {
+          margin: 0;
+          img {
+            width: 100%;
+          }
+          p {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
