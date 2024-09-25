@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { createGlobalStyle } from "styled-components";
-import { auth } from "./firebase";
+import { auth } from "./components/routers/firebase";
 import Layout from "./components/Layout";
 import Home from "./components/routers/Home";
 import Profile from "./components/routers/Profile";
@@ -9,11 +9,16 @@ import CreateAccount from "./components/routers/CreateAccount";
 import reset from "styled-reset";
 import { useState, useEffect } from "react";
 import LoadingScreen from "./components/LoadingScreen";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout />,
+    element: (
+      <ProtectedRoute>
+        <Layout />
+      </ProtectedRoute>
+    ),
     children: [
       {
         path: "",
