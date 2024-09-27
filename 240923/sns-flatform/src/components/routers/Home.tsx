@@ -1,14 +1,14 @@
-import React from "react";
-import { auth } from "./firebase";
+import { useState } from "react";
+import styled from "styled-components";
+import PostForm from "../PostForm";
+
+const Wrapp = styled.div``;
 
 const Home = () => {
-  const logout = () => {
-    auth.signOut();
-  };
   return (
-    <h1>
-      <button onClick={logout}>Logout</button>
-    </h1>
+    <Wrapp>
+      <PostForm />
+    </Wrapp>
   );
 };
 

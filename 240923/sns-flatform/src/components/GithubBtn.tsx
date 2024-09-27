@@ -2,8 +2,7 @@ import React from "react";
 import { GithubAuthProvider, signInWithPopup } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import { auth } from "../components/routers/firebase";
-
+import { auth } from "./routers/firebase";
 const Button = styled.span`
   width: 100%;
   background: #fff;
@@ -18,11 +17,9 @@ const Button = styled.span`
   border-radius: 50px;
   cursor: pointer;
 `;
-
 const Logo = styled.img`
   height: 25px;
 `;
-
 const GithubBtn = () => {
   const navigate = useNavigate();
   const onClick = async () => {
@@ -41,5 +38,4 @@ const GithubBtn = () => {
     </Button>
   );
 };
-
 export default GithubBtn;

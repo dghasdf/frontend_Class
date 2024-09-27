@@ -3,13 +3,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { auth } from "./firebase";
 import { FirebaseError } from "firebase/app";
-import {
-  Form,
-  Input,
-  Title,
-  Wrapper,
-  Error,
-} from "../auth-components";
+import { Form, Input, Title, Wrapper, Error } from "../auth-components";
 
 const CreateAccount = () => {
   const [isLoading, setIsLoading] = useState(false);

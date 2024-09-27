@@ -1,0 +1,44 @@
+React.js:
+>npm create-react-app .
+>npm create vite@latest
+
+ts만 설치
+npx create-react-app. --template typescript
+>npm create vite@latest > typescript + swc
+
+스타일 컨포넌트:
+
+npm i styled-components
+npm i @types/styled-components -d
+
+스타일리셋
+
+npm i styled-reset
+
+슬라이드 // 모달 = 리액트?
+
+-npm > 패키지중 > 슬라이드 && 모달한번에 제어하는 방법
+
+vanilla js
+zoomin // zoomout
+>window > event > scroll
+scrollY : 위로부터 스크롤이 얼만큼 내려왓는가에 대한 값!
+>z축으로 값으로 변형해서 사용!!!
+
+framer-motion : 
+컴포넌트가 마운트 // 어떠한 모션이 발생되면 기본적으로 해당 motion에 대한 vaule값이 생성된다
+> x,y 기타 등등 모션관련 vaule
+
+>useMotionValue
+>usetransform
+useScroll
+
+
+slide:
+
+React.js를 활용해서 slide만들 때 기존 바닐라 자바스크립트와 가장 큰 차이점
+
+react.js 컴포넌트 > 비동기적을 작동
+> 컴포넌트의 생애주기
+> 마운트 // 언마운트 // 렌더링
+>
