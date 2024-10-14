@@ -1,0 +1,55 @@
+Redux(react.js 직접 제공 hook이 아님)
+ - 연락처
+ - Musinsa Mall > Pivot
+ - Netflix : TMDB
+
+Redux : js앱 // 제품 개발 => state를 관리해주는 라이브러리
+> React.js에서만 사용할 수 있는게 아니다
+> redux를 사용하는 궁극적인 목적 : 
+
+> React.js Props 일방통행
+> 무조건 부모 -> 자식요소로
+> app?
+
+>useDispatch() : 사용자가 ui를 보고 어떤 이벤트를 실행하면 실행했다라고 action값으로 정의할 수 있도록 도와주는 react.js jook함수
+>useSelectcor() : 사용자의 action으로 인해 발생한 state변경값이 reducer함수를 거쳐서 store에 저장 되었을 때, store안에 있는 해당 state의 값을ㅇ 찾아오고자 할 때 사용 할 수 있는 react.js hook함수
+
+redux(동기처리 방식)
+>1번 action
+>2번 action
+두개가 있을경우 1번처리가 끝나야 2번처리가 시작된다(비효율적)
+그러기에 redux를 비동기적인 방식으로처리할 수 있도록 toolkit을 사용 => middleware
+
+>redux-saga 
+= 바닐라 자바스크립트의 배열(이터러블 객체) / 제너레이터 기반 redux 상태관리 라이브러리 toolkit
+= 학습량이 많다.
+
+> redux-thunk(우리가 배울것)
+= saga랑 정반대. action // reducer // middleware (비동기처리) // store
+
+Redux: 과도한 props driling을 제어하고, 효율적인 state 관리를 위한 라이브러리
+
+> 동기적으로 처리 단점
+
+>비동기적으로 처리할 수있게끔 기존 Redux에 middleware를 추가
+
+1) Redux - saga
+2) Redux-thunk : 비동기처리
+일반적인 복수의 reducer의 처리값을 받아서 비동기적으로 처리하는 그행위
+
+1)상품정보를 가져오는 reducer
+2)회원정보를 가져오는 reducer
+root-reducer(*비동기처리)
+
+produ ctAction.js =>액션개채를 반환하는 함수
+
+
+react-redux
+이 두개가 필요함
+
+GraphQL API & Apollo Server & Client
+
+Next.js 이후
+
+TS > TS &React.js > Nest.js > Node.js > 
+
