@@ -1,0 +1,18 @@
+리액트과정 
+
+1. simple counter
+
+2. todolist
+
+3. mini blog
+
+4. emotion diary
+
+5. sns flatform(타입스크립트이용)
+1) Vite: 빌드 도구(프랑스어 => 빠르다)=>번들링 + 컴파일링 +배포관여
+컴파일 =>scss // live sass compoiler = 번역하다
+
+- react를 활용해서 app번들링 / bundle(번들링)? : 무언가를 하나로 묶는 작업
+그렇다면 무엇을 왜? bundle를 해야할까?
+
+firebase SDK = software development kit

@@ -1,0 +1,25 @@
+쇼핑몰 레이아웃 생성
+- 로그인 페이지 구현(protected router page)
+- json server 사용(데이터 가져오기)
+
+Redux 
+
+필요한 컴포넌트들
+
+Home
+About
+
+< 페이지 속성 >
+ProductaAll
+Login
+ProductDetail
+
+< 컴포넌트 속성 >
+Naber = 공통바
+ProductCard = 실제상품을 보여주는 공간
+
+두개 서버 사용? 터미널 사용 // cmd실행 후
+command prompt 
+json-
+
+https://my-json-server.typicode.com/dghasdf/musinsa-shoppingmall

@@ -1,4 +1,3 @@
-// reset
 * {
   margin: 0;
   padding: 0;
@@ -12,32 +11,32 @@ li {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
-// common
+/* common */
 main {
   position: relative;
   width: 100%;
   height: 100vh;
   background: linear-gradient(25deg, violet, pink);
-  overflow: hidden; //스크롤이 생기지않음. 포지션값을 주엇을때만
+  overflow: hidden; //스크롤 숨
   h1 {
     position: absolute;
-    top: 7vh;
-    left: 4vw;
+    top: 7vh; //전체 부모요소의 7%
+    left: 4vw; // 부모요소의 4%
     font-size: 0;
     strong {
       font-size: 36px;
-      color: #fff;
-      line-height: 1.4;
+      line-height: 1.4; // =140%
       letter-spacing: 1px;
       color: #fff;
     }
     span {
       font-size: 12px;
-      line-height: 1;
-      color: #fff;
+      line-height: 1%;
       letter-spacing: 1px;
+      color: #fff;
       opacity: 0.8;
     }
   }
@@ -50,7 +49,7 @@ main {
       font-size: 24px;
     }
   }
-  & > p {
+  > p {
     position: absolute;
     bottom: 7vh;
     left: 50%;
@@ -62,13 +61,14 @@ main {
     opacity: 0.8;
   }
   section {
+    width: 20vw; // =20%
+    height: 65vh; // =65%
     position: absolute;
-    width: 20vw;
-    height: 65vh;
     left: 50%;
     top: 140%;
     margin-top: -25vh;
     margin-left: -10vw;
+    // border: 1px solid powderblue;
     article {
       width: 100%;
       height: 100%;
@@ -85,21 +85,24 @@ main {
         justify-content: center;
         align-content: space-between;
         border-radius: 10px;
-        box-shadow: 10px 10px 20px rgba($color: #000000, $alpha: 0.1);
-        opacity: 0.5;
+        box-shadow: 10px 10px 20px rgba($color: #8b2c59, $alpha: 0.1);
+        opacity: 0.6;
         transform: scale(0.8);
         transition: opacity 1s, transform 1s;
         .pic {
           width: 15vw;
           height: 15vw;
+          border-radius: 50%;
           margin: 0 auto;
+          background: no-repeat;
           background-repeat: no-repeat;
           background-position: center;
           background-size: cover;
+          display: flex;
           justify-content: center;
           align-items: center;
           position: relative;
-          border-radius: 50%;
+          border: 1px solid aqua;
           &::before,
           &::after {
             content: "";
@@ -117,7 +120,7 @@ main {
           }
           &::before {
             transform: translateY(10%);
-            filter: blur(20px) brightness(1.5);
+            filter: blur(20px) brightness(1.6);
           }
           .dot {
             width: 3vw;
@@ -127,6 +130,44 @@ main {
             z-index: 3;
             box-shadow: inset 5px 5px 10px rgba($color: #000000, $alpha: 0.1);
           }
+          &.on::after {
+            animation: ani 4s linear infinite;
+          }
+          &.on::before {
+            animation: ani2 4s linear infinite;
+          }
+        }
+        .txt {
+          text-align: center;
+          position: relative;
+          h2 {
+            font-size: 20px;
+            color: #222;
+          }
+          p {
+            font-size: 12px;
+            margin: 2vh 0 3vh;
+          }
+          ul {
+            display: flex;
+            justify-content: space-around;
+            li {
+              opacity: 0.6;
+              transition: opacity 0.3s;
+              cursor: pointer;
+              &:hover {
+                opacity: 1;
+                transform: scale(1.5);
+              }
+              &:nth-child(2) {
+                transform: scale(1.5);
+                &:hover {
+                  opacity: 1;
+                  transform: scale(2);
+                }
+              }
+            }
+          }
         }
       }
       &.on .inner {
@@ -134,5 +175,133 @@ main {
         transform: scale(1.1);
       }
     }
+  }
+  .btnPrev {
+    width: 60px;
+    height: 60px;
+    // border: 1px solid paleturquoise;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-20vw, -50%);
+    display: flex;
+    align-items: center;
+    text-align: left;
+    cursor: pointer;
+    span {
+      color: #fff;
+      font-size: 11px;
+      line-height: 1;
+      opacity: 1;
+      transform: translateX(30%);
+      transition: opacity 0.3s, transform 0.3s;
+    }
+    &::before {
+      content: "";
+      width: 100%;
+      height: 1px;
+      background: #fff;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform-origin: left center;
+      transform: rotate(-180deg); // 마이너스 각도는 역시계방향
+      transition: transform 0.3s;
+    }
+    &::after {
+      content: "";
+      width: 100%;
+      height: 1px;
+      background: #fff;
+      position: absolute;
+      bottom: 50%;
+      left: 0;
+      transform-origin: left center;
+      transform: rotate(-180deg);
+      transition: transform 0.3s;
+    }
+    &:hover span {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    &:hover::before {
+      transform: rotate(-30deg);
+    }
+    &:hover::after {
+      transform: rotate(30deg);
+    }
+  }
+  .btnNext {
+    width: 60px;
+    height: 60px;
+    // border: 1px solid paleturquoise;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(20vw, -50%);
+    display: flex;
+    align-items: center;
+    text-align: right;
+    cursor: pointer;
+    span {
+      color: #fff;
+      font-size: 11px;
+      line-height: 1;
+      opacity: 1;
+      transform: translateX(-30%);
+      transition: opacity 0.3s, transform 0.3s;
+    }
+    &::before {
+      content: "";
+      width: 100%;
+      height: 1px;
+      background: #fff;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform-origin: right center;
+      transform: rotate(-180deg); // 마이너스 각도는 역시계방향
+      transition: transform 0.3s;
+    }
+    &::after {
+      content: "";
+      width: 100%;
+      height: 1px;
+      background: #fff;
+      position: absolute;
+      bottom: 50%;
+      left: 0;
+      transform-origin: right center;
+      transform: rotate(-180deg);
+      transition: transform 0.3s;
+    }
+    &:hover span {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    &:hover::before {
+      transform: rotate(30deg);
+    }
+    &:hover::after {
+      transform: rotate(-30deg);
+    }
+  }
+}
+
+@keyframes ani {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes ani2 {
+  0% {
+    transform: translateY(10%) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

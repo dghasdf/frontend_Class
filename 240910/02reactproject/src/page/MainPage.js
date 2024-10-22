@@ -3,14 +3,14 @@ import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import PostList from "../list/PostList";
 import Button from "../ui/Button";
+import data from "../../data.json";
 
 const Wrapper = styled.div`
   width: calc(100% - 32px);
   border: 1px solid #ccc;
+  margin: 0 auto;
   padding: 16px;
-  maring: 0 auto;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 `;
@@ -27,15 +27,18 @@ const MainPage = () => {
   const navigate = useNavigate();
   return (
     <Wrapper>
-      <container>
+      <Container>
         <Button
           title="글 작성하기"
           onClick={() => {
             navigate("/post-write");
           }}
         />
-        <PostList posts={data} onClick={(item) => navigate(``)} />
-      </container>
+        <PostList
+          posts={data}
+          onClickItem={(item) => navigate(`/post/${item.id}`)}
+        />
+      </Container>
     </Wrapper>
   );
 };

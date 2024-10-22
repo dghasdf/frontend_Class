@@ -30,7 +30,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: "SimKyungha";
-    background: url("https://i.pinimg.com/originals/24/62/09/246209d8f51ebcfc94f3b9381f2acf61.jpg") center/cover no-repeat ;
+    background: url("https://i.namu.wiki/i/IhFrc6uiSNlonNFRXzSNrKrhPKrjpmlmsB_SDg3x0PeW_L06BFuF7mOq8AcPDYjonfNpG64cQYsINU8sICeDpg.webp") center/cover no-repeat ;
     height: 100vh;
     position: relative;
     &::before {

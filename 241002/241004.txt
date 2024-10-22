@@ -1,0 +1,63 @@
+1.카카오톡 공유하기
+
+2.카카오adFit 광고설정
+=kakaoadfit
+
+3.또 다른 deploy 방법
+- Netlify(deploy 전용 사이트)
+>git0hub와 친밀함(push)
+- firebase (Authentication // storage // database // deploy)
+- cafe24 // 도메인 > 사이트 구축
+-dothome & filezilla(*번거롭다)
+
+4. 네이버 포털사이트seo설정
+
+Ssitemap generator
+rss: 사이트 내 소소한 데이터 변화
+
+seo
+search engine optimization
+검색엔진 최적화
+= 네이버서치 어드바이저
+
+https:/app.netlify.com/ = 사이트 만드는곳 
+
+mbti 프로젝트 git(?)
+>git init
+>git hun 저장소에 repository생성(catmbti)
+>git remote add origin repository 주소입력
+>git add .
+>git commit -m "firstcommit"
+>git pusj origin master
+
+google > netlify 사이트 회원가입(git아이디로 연동)
+>사이트에서 add new site
+>import an existing project
+>repository import (catmbti)
+>gabia site 접속(유료)
+
+< 광고 >
+google adsense : 승인 까다롭다
+kakao adfit
+
+
+= MBTI 프로젝트 하면서..
+
+1.react-router-dom : page routing
+
+2. styled-commponents
+
+3react-bootstrap
+
+4.media-query
+
+5.vanilla javascript > array db& method
+(가점을 부여해서 사용자의 성향을 파악)
+
+6.img(public //src 사용법)
+
+7. 카카오 api > 공유하기
+
+8.카카오adfit > 광고 넣기
+
+9. seo = 네이버 웹마스터 도구

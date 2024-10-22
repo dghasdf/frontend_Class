@@ -71,4 +71,3 @@ $(".myslider").slick({
 $(".gototop .gnb a").click(function () {
   $.scrollTo(this.hash || 0, 800);
 });
-

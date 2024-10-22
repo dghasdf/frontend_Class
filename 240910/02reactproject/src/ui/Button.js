@@ -15,8 +15,3 @@ const Button = ({ title, onClick }) => {
 };
 
 export default Button;
-
-// and 단락회로평가:
-// 좌항값 && 우항값
-// or 단락회로평가
-// 좌항값||우항값

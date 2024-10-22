@@ -78,15 +78,15 @@ const SubmitBtn = styled.input`
 const PostForm = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [post, setPost] = useState("");
-  const [file, setFile] = useState<File | null>(null);
+  const [file, setFile] = useState(null);
 
   const maxFileSize = 7 * 1024 * 1024;
 
-  const onChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+  const onChange = (e) => {
     setPost(e.target.value);
   };
 
-  const onFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const onFileChange = (e) => {
     const { files } = e.target;
     if (files && files.length === 1) {
       if (files[0].size > maxFileSize) {
@@ -97,7 +97,7 @@ const PostForm = () => {
     }
   };
 
-  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
     const user = auth.currentUser;
     if (!user || isLoading || post === "" || post.length > 180) return;
@@ -135,6 +135,7 @@ const PostForm = () => {
       setIsLoading(false);
     }
   };
+
   return (
     <Form onSubmit={onSubmit}>
       <TextArea

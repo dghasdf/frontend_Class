@@ -1,7 +1,7 @@
 import React, { useState, useMemo, useContext } from "react";
-import { TodoContext } from "../App";
 import "./TodoList.css";
 import TodoItem from "./TodoItem";
+import { TodoContext } from "../App";
 
 const TodoList = () => {
   const { todo = [] } = useContext(TodoContext);
@@ -52,6 +52,10 @@ const TodoList = () => {
     </div>
   );
 };
+
+// TodoList.defaultProps = {
+//   todo: [],
+// };
 
 // TodoList.defaultProps = {
 //   todo: [],

@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import styled from "styled-components";
 import { Button } from "react-bootstrap";
-import { useNavigate, useParams, useSearchParams } from "react-router-dom";
-import { ResultData } from "../assets/questiondata";
+import { ResultData } from "../assets/resultData";
+import KakaoShareButton from "../components/KakaoShareButton";
 
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
   width: 100%;
   height: 100vh;
   color: #fff;
@@ -24,8 +24,8 @@ const Contents = styled.div`
   height: auto;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 20px;
 `;
 
 const Title = styled.div`
@@ -42,44 +42,48 @@ const LogoImg = styled.div`
 `;
 
 const Desc = styled.div`
-  font-size: 20px;
   margin: 10px 0;
-  line-height: 150%;
-  width: 340px;
+  padding: 8px 14px;
+  font-size: 20px;
+  text-align: center;
+  background: crimson;
+  border-radius: 8px;
+`;
+
+const ButtonGoup = styled.div`
+  display: flex;
+  gap: 10px;
 `;
 
 const Result = () => {
-  const [data, setData] = useState({});
-  const [searchParms] = useSearchParams();
-  const mbti = searchParms.get("mbti");
-
-  const nevigate = useNavigate();
+  const [resultData, setResultData] = useState({});
+  const [searchParams] = useSearchParams();
+  const mbti = searchParams.get("mbti");
+  const navigate = useNavigate();
   const handleClickButton = () => {
-    nevigate("/");
+    navigate("/");
   };
-
   useEffect(() => {
-    const result = ResultData.find((item) => item.best === mbti);
-    setData(result);
+    const result = ResultData.find((s) => s.best === mbti);
+    setResultData(result);
   }, [mbti]);
-
-  console.log(data);
 
   return (
     <Wrapper>
       <Header>예비집사 판별기</Header>
       <Contents>
         <Title>결과보기</Title>
-        <Title></Title>
         <LogoImg>
-          <img className="rounded-circle" src={data.img} />
+          <img className="rounded-circle" src={resultData.image} />
         </LogoImg>
         <Desc>
-          예비집사님과 찰떡궁합인 고양이는 <br /> 🐱 {data.best}형 {data.name}{" "}
-          🐱
+          😜예비집사님과 찰떡궁합인 😻고양이는
+          <br /> {resultData.best}형 {resultData.name} 입니다.
         </Desc>
-        <Desc>{data.desc}</Desc>
-        <Button onClick={handleClickButton}>테스트 다시 시작하기</Button>
+        <ButtonGoup>
+          <Button onClick={handleClickButton}>테스트 다시시작하기</Button>
+          <KakaoShareButton data={resultData} />
+        </ButtonGoup>
       </Contents>
     </Wrapper>
   );

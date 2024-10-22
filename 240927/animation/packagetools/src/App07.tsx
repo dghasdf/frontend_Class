@@ -1,10 +1,6 @@
-import { useRef, useEffect, useState } from "react";
+import React, { useState } from "react";
 import {
-  delay,
   motion,
-  useMotionValue,
-  useTransform,
-  useScroll,
   AnimatePresence,
 } from "framer-motion";
 import { createGlobalStyle, styled } from "styled-components";
@@ -14,26 +10,25 @@ const GlobalStyles = createGlobalStyle`
   ${reset};
   @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
+body {
   font-family: "Source Sans 3", sans-serif; 
   background: linear-gradient(135deg, #e09, #d0e);
 }
 
-  ul,li{
-    list-style: none;
-  }
+ul, li {
+  list-style: none;
+}
 
-  a{
-    text-decoration: none;
-    color: inherit;
-  }
-
+a {
+  text-decoration: none;
+  color: inherit;
+}
 `;
 
 const Wrapper = styled(motion.div)`
@@ -75,8 +70,8 @@ const Button = styled.button`
 
 const boxArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-const box = {
-  initial: (back: boolean) => ({
+const boxVariants = {
+  initial: (back) => ({
     x: back ? 500 : 500,
     opacity: 0,
     scale: 0,
@@ -89,7 +84,7 @@ const box = {
       duration: 0.5,
     },
   },
-  exits: (back: boolean) => ({
+  exit: (back) => ({
     x: back ? 500 : -500,
     opacity: 0,
     scale: 0,
@@ -102,14 +97,17 @@ const box = {
 const App07 = () => {
   const [visible, setVisible] = useState(1);
   const [back, setBack] = useState(false);
+  
   const prevPlease = () => {
     setBack(true);
     setVisible((prev) => (prev === 1 ? 10 : prev - 1));
   };
+  
   const nextPlease = () => {
     setBack(false);
     setVisible((prev) => (prev === 10 ? 1 : prev + 1));
   };
+
   return (
     <>
       <GlobalStyles />
@@ -119,10 +117,10 @@ const App07 = () => {
             i === visible ? (
               <Box
                 custom={back}
-                variants={box}
+                variants={boxVariants}
                 initial="initial"
                 animate="visible"
-                exit="exits"
+                exit="exit"
                 key={visible}
               >
                 {visible}

@@ -1,0 +1,64 @@
+1.웹 디자이너의 일자리가 많이 감소!
+1) 2d그래픽 툴 + 영상편집 업무가 대체적(70%)
+2) 웹 디자이너 + coding(30%)
+
+2.F/E
+-UI/UX 기본개념: 채용시장 매우 고전
+1) UI/UX 개념 탑재한 F/E(60%)
+2) 준 풀스택(40%)
+
+2.chat GPT: 디자인 소스 제작 활용 방법 쉬워졌기 때문에
+>F/E + coding
+
+3.B/E
+- AI & 인공지능
+- AI엔지니어
+
+React.js > 미들웨어
+React.js > Basic
+TS > 문법
+React + TS
+GraphQL API //
+Next.js
+Node.js
+
+------
+
+GSAP // Three.js
+
+컴퓨터 VS 나 => 가위 바위 보 게임
+
+컴퓨터 선택 (랜덤함수)
+나 선택(자의 선택 => 가위바위보 선택)
+>이벤트 // 콜백함수 => state 관리가 필요함
+
+출력공간
+배열 > 0,1,2
+>random
+
+ - 리액트로 날씨정보API 만들기 - 
+
+api = 이미 만들어진 웹/앱 프로그래밍을 상호작용하는 방식
+
+주소안에 있는 파라미터를 내용을 변경해서 가져오는거? = REST PAI
+< 중요요소들 > 
+-form
+-method: get // post // put // delete
+
+graphql API & Apollo
+
+https://openweathermap.org/current (날씨 api주소)
+
+1.바닐라 자바스크립트를 이용해서 환경변수를 설정할때는 env.js => 모듈의 형태로 import를 해서 찾아옴 // 출력은 export
+
+2. 리액트는 무조건 루트폴더에 .env파일(환경변수를 설정하는곳) 만든 후 REACT_APP_API_KEY=""가 아닌
+REACT_APP_KEY=""로 키값을 입력해줘야한다.
+ 
+3. 이후 PROCESS.ENV.REACT_APP_API_KEY가 아닌! const API_KEY = import.meta.env.VITE_API_KEY; 라고 작성해야 불러올 수 있다
+
+4. 환경변수 설정 > 반드시 서버 껏다가 켜준다.
+
+https://unsplash.com/developers = 언스플래시 개발자용(키 받는 곳)
+ 
+
+
