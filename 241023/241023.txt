@@ -1,0 +1,75 @@
+npm init -y // 노드초기화
+
+npm i @types/node // 타입 정의
+
+npm i typescript -g // npm i typescript // TS를 JS로 컴파일링 시켜줄 수 있는 컴파일러 세팅
+
+tsc -v // 컴파일러 설치 여부 확인
+이때 안될경우
+
+cmd > powershell(관리자 권한)
+
+Get-ExecutionPolicy
+
+Set-ExecutionPolicy RemoteSigned > y
+
+node src/index.js // 노드 기반에서 터미널 내 실행시키고자 하는 js파일을 테스트
+
+npm i ts-node -g // npm i ts-node // JS파일을 TS파일로 컴파일링 하는 것과 동시에 node에서 실행시켜주도록 해주는 역할
+이건 node -18v까지만 적용이 된다
+
+ts-node src/index.ts // 이걸하면 에러가 나옴 ->읽어보면 package.json에 타입설정이 없다 
+이때 package.json에 맨 아래 중괄호 두개 사이에  첫번째 중괄호에 , <<< 넣고 코드: "type": "module"를 넣으면 된다
+
+tsc --init // 타입스크립트 컴파일러 옵션을 정의하기 // 이때 tsconfig.json 생성되는데 이때 내용 다 삭제
+{
+  "compilerOptions": {
+    "module": "ESNext"
+  },
+  "ts-node": {
+    "esm": true
+  }
+}
+이코드를 넣고 ts-node src/index.ts 입력하면 js가 아직 선언되지않았다고하는데 이게 node가 18버전이상이라서 그렇다.
+이럴경우 package.son의 "type": "module" > "type": "commonjs" 변경, tsconfig.json에 들어가서
+{
+  "compilerOptions": {
+    "module": "CommonJS"
+  },
+  "ts-node": {
+    "esm": false
+  }
+}
+이렇게 변경 // 하지만 이건 최신버전이 아님.
+
+최신버전은 다시 json파일쪽을 원래 상태로 돌려놓기.
+하지만 오류는 어떻게 해결? > 
+
+npm i tsx -g // npm i tsx // 설치
+
+tsx -v // 버전확인
+
+tsx src/index.ts // 컴파일링 완료
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "strict": false,  //엄격한 모드
+    "strictNullChecks": false,
+    "moduleDetection": "force",
+    "skipLibCheck": true
+  },
+  "ts-node": {
+    "esm": true
+  }
+}
+이렇게 세팅
+
+
+number // string // array // boolean // type 별칭 // 구조적 타입시스템
+interface // implements // extents // abstract // 접근 제어자 // static
+//enum =>Enumerable: 열거형 타입
+//리터럴 타입
+any
+
+void
