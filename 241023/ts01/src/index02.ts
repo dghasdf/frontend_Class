@@ -105,6 +105,8 @@
 // //   name: "",
 // // };
 
+// ----유니온타입------
+
 // type Intersection = Dog & Person;
 
 // let intersection: Intersection = {
@@ -118,8 +120,9 @@
 //   age: number;
 // }
 
-// let person01 = {} as Person01;
+// -----인터섹션 타입-----
 
+// let person01 = {} as Person01;
 // person01.name = "";
 // person01.age = 20;
 
@@ -134,14 +137,20 @@
 //   breed: "똥개",
 // } as Dog;
 
+
 // 타입 단언은 any 다음으로 치트키!!!
 // 타입 단언을 실행시키려면 반드시 다음의 조건!!!
 // 상호간 슈퍼 & 서브타입이어야 함!!
+
+
+
 let num1 = 10 as never;
 let num2 = 10 as unknown;
 let num3 = 10 as unknown as string;
 
 let num4 = 10 as const;
+
+// ---타입 단언 ----
 
 // 타입가드 = 타입좁히기
 const func = (value: number | string) => {
@@ -151,3 +160,5 @@ const func = (value: number | string) => {
     value.toUpperCase();
   }
 };
+
+// -----타입 가드
