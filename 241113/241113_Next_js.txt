@@ -1,0 +1,53 @@
+Next.js? 
+- 프레임워크 // 개발자가 어떤 것을 제어할 수 있는 대상이 아니다.
+- 이미 완성 또는 구축되어있는 문법 체계를 그냥 가져다가 사용
+- 크리에이티브한 문법이 없이, 정해진 루트대로만 할 수가 있음
+- 기존 SSR방식에서 업그레이드 된 SSR 방식
+- Pre-Rendering = 사전 렌더링 방식을 사용
+
+1) SEO 검색률이 매우 향상
+2) FCP (first contentful paint)
+3) Hydration (어떠한 상태가 실질적인 상태로 변화 되어지는 화학적 작용)
+> 컴포넌트 마운트 => 사용자 액션
+=> TTI (Time To interactive)시간이 매우 개선
+
+Next.js의 축약 정의(장점) // 면접에서도 물어볼 가능성이 있다.
+1. React의 framework: 거의 답이 정해져있다
+2. SEO에 최적화
+3. FCP > Pre-Rendering 기능
+4. Hydration // TTI 개선
+
+postgresql://postgres.euokzphhdoywlwluetoc:[YOUR-PASSWORD]@aws-0-ap-northeast-2.pooler.supabase.com:5432/postgres
+// 저기 패스워드는 노드js홈페이지 들어가서 로그인후 settings - database 스크롤내려서 database password(까먹었을때) 비밀번호 입력하고 리셋누르면된다. 현재 비밀번호:wnsdud794684
+이때 database setting - Connection string - 에 모듈을 트랜지션에서 섹션으로 바꿔서 카피해야한다.
+이후 npx prisma db push 하면 노드js 홈페이지 테이블 에디터에 북과 리뷰라는 스키마가 나온다.
+> npm run seed하면 북과 리뷰 스키마에 데이터가 넣어진다(새로고침)
+> npm run build (이때까지 했던 것들을 빌드시킨다.)
+>npm run start(실행)
+>npx prisma studio
+크롬주소에 localhost:12345 입력하면 주소나옴 
+api클릭하면 여러가지 스키마들이 뜨는데 /book 이런식으로 안내하고있는데 이때  localhost:12345/book 이런식으로 주소에 입력하면
+json데이터가 나온다. (12345는 코드상에 있다)
+코드에서 npx prisma studio(가짜서버공간), npm run start 해서 두개의 서버를 열어야한다.(터미널 두개만드면된다.//터미널 분할)
+이상태로 코드파일이 있는 곳에 코드 새로 열어서 npx create-next-app@14 ui-main(파일명)
+질문이 나오면 y,y,n,y,n,n인데 상황에따라서 대답이 바뀐다.(ex:Tailwind CSS)
+열때는 npm run dev 안에 pages폴더의 .도쿄먼트.tsx가 ui의 핵심요소가 될예정.
+pages안에 파일명을[파일명].tsx >> 대괄호표기법으로 넣으면 주소의 파라미터값을 만든다는 의미. book/1,2,3등등등
+>[...파일명].tsx 하면 파라미터안에 파라미터 book/1/2 등등 = catch all segment 기능
+>[[...파일명]].tsx. : 파라미터값이 없을때도 사용하겠다. = optional catch all segment 기능 
+
+1.Next.js 소개
+comon page-
+- page routerting
+
+
+
+supabase: firebase처럼 cloude 공간 // 서버공간
+
+schema : 서버를 구축> db를 어떤 방식으로 저장하고 출력할지
+
+Next.js + TS + supbase + vecel & prisma (현 프론트엔드에서 가장 많이 사용되는 조합)
+prisma : 
+
+
+

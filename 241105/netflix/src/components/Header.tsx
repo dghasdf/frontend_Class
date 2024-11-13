@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import styled from "styled-components";
 import { motion, useAnimation, useScroll } from "framer-motion";
-import { Link, useMatch } from "react-router-dom";
+import { Link, useMatch, useNavigate, useLocation } from "react-router-dom";
+import { useForm } from "react-hook-form";
 
 const Nav = styled(motion.nav)`
   width: 100%;
@@ -10,11 +11,11 @@ const Nav = styled(motion.nav)`
   justify-content: space-between;
   align-items: center;
   padding: 0 30px;
-  background: ${(props) => props.theme.black.darker};
   color: ${(props) => props.theme.red};
   font-size: 18px;
   position: fixed;
   top: 0;
+  z-index: 1;
 `;
 
 const Col = styled.div`
@@ -27,11 +28,11 @@ const Logo = styled(motion.svg)`
   width: 95px;
   height: 25px;
   fill: ${(props) => props.theme.red};
+  cursor: pointer;
   path {
     stroke-width: 10px;
     stroke: ${(props) => props.theme.white.darker};
   }
-  cursor: pointer;
 `;
 
 const Items = styled.ul`
@@ -44,29 +45,27 @@ const Item = styled.li`
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  cursor: pointer;
   position: relative;
-  transition: color 0.3s;
+  transition: opacity 0.3s;
+  cursor: pointer;
   &:hover {
-    color: ${(props) => props.theme.black.veryDark};
+    opacity: 0.7;
   }
 `;
 
 const Circle = styled(motion.span)`
-  /* display: inline-block; */
   position: absolute;
-  bottom: -8px;
+  bottom: -4px;
   left: 0;
-  right: 0px;
+  right: 0;
   margin: 0 auto;
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background: ${(props) => props.theme.red};
 `;
 
-const Search = styled.span`
+const Search = styled.form`
   color: ${(props) => props.theme.red};
   display: flex;
   align-items: center;
@@ -81,44 +80,67 @@ const Search = styled.span`
 `;
 
 const Input = styled(motion.input)`
+  width: 200px;
   position: absolute;
-  left: -180px;
+  left: -170px;
   transform-origin: right center;
   background: transparent;
   color: ${(props) => props.theme.red};
-  border: none;
   font-size: 18px;
+  border: none;
   border-bottom: 1px solid ${(props) => props.theme.white.darker};
   &:focus {
     outline: none;
   }
 `;
 
+const Button = styled.button`
+  padding: 10px 10px;
+  color: ${(props) => props.theme.white.darker};
+  background: ${(props) => props.theme.red};
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+`;
+
 const logoVariants = {
   normal: { fillOpacity: 1 },
   active: {
-    fillOpacity: [0, 0.5, 0, 0.7, 0, 0.2, 1, 0],
-    transition: { repeat: 2 },
+    fillOpacity: [0, 1, 0],
+    transition: {
+      repeat: Infinity,
+    },
   },
 };
 
-const Button = styled.span`
-  color: ${(props) => props.theme.white.darker};
-`;
+interface Form {
+  keyword: string;
+}
 
 const Header = () => {
-  const [searchopen, setSearchOpen] = useState(false);
+  const location = useLocation();
+  const isLoginPage = location.pathname === "/login";
+
+  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
+  const navigate = useNavigate();
+
+  // React Hooks는 항상 최상단에서 호출
+  const [searchOpen, setSearchOpen] = useState(false);
   const homeMatch = useMatch("/");
+  const modalMatch = useMatch("/movies/*");
   const tvMatch = useMatch("/tv");
   const inputAnimation = useAnimation();
   const navAnimation = useAnimation();
   const { scrollY } = useScroll();
-  const navVariants = {
-    top: { background: "rgba(0,0,0,0)" },
-    scroll: { background: "rgba(0,0,0,1)" },
-  };
+  const main = useNavigate();
+  const { register, handleSubmit, setValue } = useForm<Form>();
 
   useEffect(() => {
+    const savedLoginStatus = localStorage.getItem("isLoggedIn");
+    if (savedLoginStatus === "true") {
+      setIsLoggedIn(true);
+    }
+
     scrollY.on("change", () => {
       if (scrollY.get() > 60) {
         navAnimation.start("scroll");
@@ -126,10 +148,19 @@ const Header = () => {
         navAnimation.start("top");
       }
     });
-  }, [scrollY]);
+  }, [scrollY, navAnimation]);
+
+  const goToMain = () => {
+    main("/");
+  };
+
+  const onValid = (data: Form) => {
+    main(`/search?keyword=${data.keyword}`);
+    setValue("keyword", "");
+  };
 
   const openSearch = () => {
-    if (searchopen) {
+    if (searchOpen) {
       inputAnimation.start({
         scaleX: 0,
       });
@@ -141,10 +172,31 @@ const Header = () => {
     setSearchOpen((prev) => !prev);
   };
 
+  const navVariants = {
+    top: { background: "rgba(0, 0, 0, 1)" },
+    scroll: { background: "rgba(255, 255, 255, 1)" },
+  };
+
+  // /login 페이지에서는 헤더를 렌더링하지 않음
+  if (isLoginPage) {
+    return null;
+  }
+
+  const handleLoginClick = () => {
+    if (isLoggedIn) {
+      // 로그아웃
+      localStorage.setItem("isLoggedIn", "false"); // 로그아웃 상태 저장
+      setIsLoggedIn(false);
+      navigate("/"); // 홈으로 리디렉션
+    } else {
+      navigate("/login"); // 로그인 페이지로 이동
+    }
+  };
   return (
     <Nav variants={navVariants} animate={navAnimation} initial={"top"}>
       <Col>
         <Logo
+          onClick={goToMain}
           variants={logoVariants}
           initial="normal"
           whileHover="active"
@@ -162,15 +214,19 @@ const Header = () => {
           </Item>
           <Item>
             <Link to={"/tv"}>
-              Tv Shows{tvMatch && <Circle layoutId="circle" />}
+              TV Shows {tvMatch && <Circle layoutId="circle" />}
             </Link>
           </Item>
         </Items>
       </Col>
       <Col>
-        <Search onClick={openSearch}>
+        {/* <Button onClick={handleLoginClick}>
+          {isLoggedIn ? "로그아웃" : "로그인"}
+        </Button> */}
+        <Search onSubmit={handleSubmit(onValid)}>
           <motion.svg
-            animate={{ x: searchopen ? -194 : 0 }}
+            onClick={openSearch}
+            animate={{ x: searchOpen ? -194 : 0 }}
             transition={{ type: "linear" }}
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 512 512"
@@ -178,11 +234,11 @@ const Header = () => {
             <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
           </motion.svg>
           <Input
-            type="text"
-            transition={{ type: "linear" }}
-            placeholder="Search for Movie or TV..."
+            {...register("keyword", { required: true, minLength: 2 })}
             animate={inputAnimation}
             initial={{ scaleX: 0 }}
+            transition={{ type: "linear" }}
+            placeholder="Search for movies..."
           />
         </Search>
       </Col>

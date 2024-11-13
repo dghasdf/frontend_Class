@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import theme from "./theme";
 import Header from "./components/Header";
+import { useState } from "react";
 
 const GlobalStyle = createGlobalStyle`
 *{
