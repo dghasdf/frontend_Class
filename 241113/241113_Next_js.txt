@@ -67,5 +67,31 @@ Next.js + TS + supbase + vecel & prisma (현 프론트엔드에서 가장 많이
 -api > 파일명
 
 
+SSR 방식(현재시점) > SCR방식
+- Pre-Rendering 사용
+- user // nlient // server
+- 기존에는 user가 client를 통해서 server에 무언가를 요청하는 시점에 맞춰서 데이터를 생성해서 전달하는 방식 vs 1차 렌더링
+1차렌더링=index.html + js
+- client(2차 렌더링) : ui가 출력될 수 잇도록 하는 단계
+- 최초에 브라우저에서 컴포넌트 마운트가 되기위한 이전 시간이 현저히 줄어들게 됨 = FCP타입 : first contentful painting
+- fcp가 행동되기까지의 시간 = TTI(time to interactive)
+data fetching 방법?
+- 사전 렌더링을 하기 때문에, 사전 렌더링 시간 동안 먼저 fetching
 
+*data fetching
+1. SSR방식: 사전 렌더링 기간 동안 데이터를 페이칭 하는 방법
+> 무조건 가장 최신 업데이트가 되어진 데이터를 서버로 부터 받아올 수 있음
+> 만약 서버가 사전 렌더링을 해줘야하는 로우 데이터가 만약 무거운 경우에는 이자체 단계에서로딩시간을 잡아먹을 수 있다
 
+2.SSG방식: 빌드 단계에서 최종적으로 정의된 데이터를 사전에 fetching하는 방법
+(static site generation방식)
+> 서버에서 사전 렌더링 시 무거운 데이터를 처리해야하는 부담을 빌드 단계에서 압축한 데이터만 가지고 처리
+
+3. ISR방식: 사전 렌더링 + 빌드 합침 => 최초에서 페이지의 데이터 패칭 방법을 상황에 따라서 선택할 수 있음
+(incremental Static regeneration)
+
+react.js =>scr // 파일수정 변환 => server 상관관계
+next.js =>server
+
+cloud 방식으로 만들어진 server시영
+supabase = 개인용 가상 cloud할당 > server구현

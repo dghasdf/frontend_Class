@@ -1,0 +1,7 @@
+expents base.pug
+
+block content 
+  h4 change Title of Video
+  form(method="POST")
+    input(type="text" name="title" placeholder="Video Title" value=video.title required)
+    input(type="submit" value="save")

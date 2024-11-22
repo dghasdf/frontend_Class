@@ -1,4 +1,3 @@
-import { promises } from "dns";
 import React from "react";
 
 const Page = async ({
