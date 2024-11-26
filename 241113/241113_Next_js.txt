@@ -95,3 +95,27 @@ next.js =>server
 
 cloud 방식으로 만들어진 server시영
 supabase = 개인용 가상 cloud할당 > server구현
+
+
+App router
+
+ - 페이지 캐싱
+> full router cache (풀 라이트 캐시)
+> next.js 서버가 데이터를 사전 렌더링 하기 전 단계에서 데이터의 캐시값을 저장 및 정의 해놓은 기능
+1) 정적인 페이지
+> 최초에 책 12권 정보
+
+2) 동적인 페이지(dymaic page)
+> query / parameter + 데이터 캐시 저장x 
+> query / parameter + 데이터 캐시 저장
+query / parameter를 받지않음 + 데이터 캐시 저장x 
+
+dynamicParams => 변수 및 속성
+> 라우트 세그먼트 옵션
+ - 어떤 특정 컴포넌트 페이지를 강제적으로 dynamic 혹은 statice 속성으로 변환하는 방법
+
+>client router cache(클라이언트 라우터 캐시)
+:브라우저에 저장이 되는 캐시
+클라이언트 컴포넌트 페이지 역시 서버 컴포넌트 페이지처럼 유저가 특정 페이지에 접속하게 되면 브라우저에 캐시값을 저장해놓아서 향후 동일한 페이지를 방문하고자 했을 때 효율적이고 빠르게 접속할 수 잇도록 도와주는 역할
+
+ 
