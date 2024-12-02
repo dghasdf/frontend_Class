@@ -2,11 +2,12 @@ import React, { ReactNode } from "react";
 import "./globals.css";
 import Link from "next/link";
 import style from "./layout.module.css";
-import { BookData } from "../types";
+import { BookData } from "@/types";
 
 const Footer = async () => {
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_API_SERVER_URL}/book`
+    `${process.env.NEXT_PUBLIC_API_SERVER_URL}/book`,
+    { cache: "force-cache" }
   );
 
   if (!response.ok) {
@@ -24,7 +25,13 @@ const Footer = async () => {
   );
 };
 
-const Rootlayout = ({ children }: { children: ReactNode }) => {
+const Rootlayout = ({
+  children,
+  modal,
+}: {
+  children: ReactNode;
+  modal: ReactNode;
+}) => {
   return (
     <html lang="ko">
       <body>
@@ -35,6 +42,8 @@ const Rootlayout = ({ children }: { children: ReactNode }) => {
           <main>{children}</main>
           <Footer />
         </div>
+        {modal}
+        <div id="modal-root"></div>
       </body>
     </html>
   );

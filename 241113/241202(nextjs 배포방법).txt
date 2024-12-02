@@ -1,0 +1,59 @@
+3.(배포) > next.js 배포
+
+deployement 배포방법
+
+vercel 홈페이지
+
+ul vs코드들어가서
+npm i vercel -g, npm i vercel
+
+vercel login > github
+
+onebite-book (서버 vs코드 들어간후)
+
+npm i vercel
+
+vercel
+
+Set up and deploy? > y
+Which scope should contain your project? > 깃허브 아이디 맞는지 확인
+Link to existing project?> 링크잇냐? no)
+What’s your project’s name? 이프로젝트 네임
+In which directory is your code located? > ./ 이렇게 나오는데 그냥 엔터
+
+vercel 홈페이지 들어가서 내가만든 프로젝트 들어가기
+확인되면 다시 ul vs코드들어가서
+
+> Success! GitHub authentication complete for az3014@naver.com
+Congratulations! You are now logged in. In order to deploy something, run `vercel`.
+💡  Connect your Git Repositories to deploy every branch push automatically (https://vercel.link/git).
+이거뜨는지 확인 후 
+
+vercel 
+
+ Set up and deploy? > y
+Which scope should contain your project? > 엔터
+Link to existing project? > 엔터
+ What’s your project’s name? > 이 코드의 프로젝트 이름
+In which directory is your code located? > ./ 이거나오면 엔터
+Want to modify these settings? > 수정사항 잇어? no
+
+이후 에러뜨는게 정상. (Error: Command "npm run build" exited with 1) 빌드하라고 뜬다.
+
+npm run build
+빌드하고 나면 사용하지않는 컴파일 을 지우라고하고, any라는 타입을 사용하지말라고한다. (.)book/[id]폴더에 default.tsx에서 import react 지우기
+그러면 actions에 폴더에잇는 delete-review-actions.tsx 에서 주석처리로 /* eslint-disable @typescript-eslint/no-explicit-any */
+넣으면 any타입 넘어갈수잇다 (any라고 타입 지정해둔곳은 전부 주석처리 해줘야한다)
+
+다시 빌드
+
+이후 에러 또 뜨면
+(?) vercel 상단에 settings에 들어가서
+Environment Variables에 들어가서 key값 넣어줘야하는데 왼쪽은 vs코드에 있는 env.에 보면 API...URL 있는데 복붙, 오른쪽 박스는
+페이지 배포가 아닌, 서버01배포로 들어가서 도메인 복사 (onebite-books-server01-six.vercel.app
+) 이후 
+다시 빌드하고, 페이지01들어가서 ready?? 버튼 누르면 오류 나오는데 다시 settings 들어가서 Project Settings > Function Region에서 서울 대한민국으로 설정 (초기는 미국인가? 되어있음)
+
+https://onebite-books-server01-six.vercel.app/ (vercel) 페이지에서의 나의 프로젝트 도메인 주소
+
+배포끝나면 배포 도메인 카카오톡으로 확인

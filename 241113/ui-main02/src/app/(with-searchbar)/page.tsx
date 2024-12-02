@@ -1,9 +1,10 @@
 import styles from "./page.module.css";
-import BookItem from "../../components/book-item";
-import { BookData } from "../../types";
-import delay from "../../util/delay";
+import BookItem from "@/components/book-item";
+import { BookData } from "@/types";
+import delay from "@/util/delay";
 import { Suspense } from "react";
-import BookListSkeleton from "../../components/skeleton/book-list-skeleton";
+import BookListSkeleton from "@/components/skeleton/book-list-skeleton";
+import { Metadata } from "next";
 
 export const dynamic = "force-dynamic";
 
@@ -18,14 +19,12 @@ const RecoBooks = async () => {
   const response = await fetch(
     `${process.env.NEXT_PUBLIC_API_SERVER_URL}/book/random`,
     {
-      next: {
-        revalidate: 3,
-      },
+      cache: "no-store",
     }
   );
-  if (!response.ok) {
-    return <div>오류가 발생했습니다...</div>;
-  }
+  // if (!response.ok) {
+  //   return <div>오류가 발생했습니다...</div>;
+  // }
   const recoBooks: BookData[] = await response.json();
   return (
     <div>
@@ -40,11 +39,11 @@ const AllBooks = async () => {
   await delay(1500);
   const response = await fetch(
     `${process.env.NEXT_PUBLIC_API_SERVER_URL}/book`,
-    { cache: "force-cache" }
+    { cache: "no-store" }
   );
-  if (!response.ok) {
-    return <div>오류가 발생했습니다...</div>;
-  }
+  // if (!response.ok) {
+  //   return <div>오류가 발생했습니다...</div>;
+  // }
   const allBooks: BookData[] = await response.json();
   return (
     <div>
@@ -53,6 +52,16 @@ const AllBooks = async () => {
       ))}
     </div>
   );
+};
+
+export const metadata: Metadata = {
+  title: "한입 북스",
+  description: "한입 북스에 등록된 도서를 만나보세요",
+  openGraph: {
+    title: "한입 북스",
+    description: "한입 북스에 등록된 도서를 만나보세요",
+    images: ["/thumbnail.png"],
+  },
 };
 
 const Home = async () => {
