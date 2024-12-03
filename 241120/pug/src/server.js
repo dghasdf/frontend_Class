@@ -1,8 +1,11 @@
 import express from "express";
 import morgan from "morgan";
-import globalRouter from "./routers/globalRouter";
+import rootRouter from "./routers/rootRouter";
 import userRouter from "./routers/userRouter";
-import videoRouter from "./Routers/videoRouter";
+import videoRouter from "./routers/videoRouter";
+import session from "express-session";
+import MongoStore from "connect-mongo";
+import { localMiddleware } from "./middlewares";
 
 const app = express();
 const logger = morgan("dev");
@@ -11,12 +14,18 @@ app.set("view engine", "pug");
 app.set("views", process.cwd() + "/src/views");
 app.use(logger);
 app.use(express.urlencoded({ extended: true }));
-app.use("/", globalRouter);
+app.use(
+  session({
+    secret: "Hello!",
+    resave: true,
+    saveUninitialized: true,
+    store: MongoStore.create({ mongoUrl: "mongodb://127.0.0.1:27017/nodejs" }),
+  })
+);
+
+app.use(localMiddleware);
+app.use("/", rootRouter);
 app.use("/users", userRouter);
 app.use("/videos", videoRouter);
-
-// app.use(privateMiddleWare); // "/" 경로는 globalRouter에서 처리
-// app.get("/", handleHome); // "/users" 경로는 userRouter에서 처리
-// app.get("/protected", handelProtected); // "/video" 경로는 videoRouter에서 처리
 
 export default app;

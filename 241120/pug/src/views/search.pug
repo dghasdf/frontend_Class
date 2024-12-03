@@ -1,0 +1,13 @@
+extends base.pug
+include minxins/video
+
+block content
+  form(method="GET")
+    input(type="text" name="keyword" placeholder="Search By Title")
+    input(type="submit" value="Search Now")
+
+  each video in videos 
+    +video(video)
+
+    // name = 페이지의 쿼리값을 생성해줄수 있는 키워드
+    
